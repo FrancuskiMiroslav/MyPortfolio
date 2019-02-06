@@ -17,7 +17,7 @@
 
 body {
   @include background;
-  background: $darkGrey;
+  background: $primaryColor;
   color: #fff;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   height: 100%;
@@ -35,7 +35,7 @@ body {
     &.sm-heading {
       margin-bottom: 30px;
       padding: 5px 8px;
-      background: rgba(lighten($darkGrey, 2), 0.5);
+      background: rgba(lighten($primaryColor, 2), 0.5);
     }
   }
   a {
@@ -48,7 +48,7 @@ body {
   }
 
   .text-secondary {
-    color: $yellow;
+    color: $secondaryColor;
   }
 
   main {
@@ -60,7 +60,7 @@ body {
         padding: 10px;
 
         &:hover {
-          color: $yellow;
+          color: $secondaryColor;
           @include easeOut();
         }
       }

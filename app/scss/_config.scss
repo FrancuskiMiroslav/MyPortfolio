@@ -1,8 +1,8 @@
-$darkGrey: #525252;
-$yellow: #eece1a;
+$primaryColor: #642929;
+$secondaryColor: #ce9416;
 $show-home-image: true;
 $home-image: url(../img/background.jpg);
-$background-opacity: 0.9;
+$background-opacity: 0.8;
 
 @mixin easeOut {
   transition: all 0.8s ease-out;
@@ -22,7 +22,7 @@ $background-opacity: 0.9;
         right: 0;
         width: 100%;
         height: 100%;
-        background: rgba($darkGrey, $background-opacity);
+        background: rgba($primaryColor, $background-opacity);
         z-index: -100;
       }
     }
