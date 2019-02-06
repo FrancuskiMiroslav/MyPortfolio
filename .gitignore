@@ -1,0 +1,22 @@
+# Dependency directories
+node_modules
+*.json
+
+### macOS ###
+*.DS_Store
+.AppleDouble
+.LSOverride
+
+### Windows ###
+Thumbs.db
+ehthumbs.db
+*.zip
+*.rar
+*.7z
+*.iso
+*.tgz
+*.map
+*.lnk
+
+# Folder config file
+Desktop.ini

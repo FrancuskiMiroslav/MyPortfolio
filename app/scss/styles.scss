@@ -1,0 +1,105 @@
+@import "print";
+
+$darkGrey: #525252;
+$yellow: #eece1a;
+$show-home-image: true;
+$home-image: url(../img/background.jpg);
+$background-opacity: 0.9;
+
+@mixin easeOut {
+  transition: all 0.8s ease-out;
+}
+
+@mixin background {
+  @if $show-home-image {
+    &#bg-img {
+      background: $home-image;
+      background-attachment: fixed;
+      background-size: cover;
+
+      &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba($darkGrey, $background-opacity);
+        z-index: -100;
+      }
+    }
+  }
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+
+  li {
+    list-style-type: none;
+  }
+  a {
+    text-decoration: none;
+  }
+}
+
+body {
+  @include background;
+  background: $darkGrey;
+  color: #fff;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  height: 100%;
+  line-height: 1.5;
+
+  h1,
+  h2,
+  h3 {
+    font-weight: 400;
+
+    &.lg-heading {
+      font-size: 60px;
+    }
+
+    &.sm-heading {
+      margin-bottom: 30px;
+      padding: 5px 8px;
+      background: rgba(lighten($darkGrey, 2), 0.5);
+    }
+  }
+  a {
+    color: #fff;
+  }
+  header {
+    position: fixed;
+    z-index: 2;
+    width: 100%;
+  }
+
+  .text-secondary {
+    color: $yellow;
+  }
+
+  main {
+    padding: 65px;
+    height: 100%;
+
+    .icons {
+      a {
+        padding: 10px;
+
+        &:hover {
+          color: $yellow;
+          @include easeOut();
+        }
+      }
+    }
+
+    &#home {
+      overflow: hidden;
+      h1 {
+        margin-top: 20vh;
+      }
+    }
+  }
+}
