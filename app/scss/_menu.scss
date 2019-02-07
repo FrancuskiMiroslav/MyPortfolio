@@ -2,7 +2,7 @@
   position: absolute;
   z-index: 5;
   top: 30px;
-  right: 65px;
+  right: 25px;
   cursor: pointer;
   @include easeOut;
 
@@ -10,7 +10,7 @@
     width: 28px;
     height: 3px;
     margin-bottom: 5px;
-    background: #fff;
+    background: setTextColor($primaryColor);
     @include easeOut;
   }
 
@@ -189,9 +189,6 @@
 
 @include mediaSM {
   body {
-    .menu-btn {
-      right: 35px;
-    }
     main#home {
       padding: 30px;
       @include easeOut;

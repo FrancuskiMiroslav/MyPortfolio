@@ -1,5 +1,6 @@
 @import "config";
 @import "menu";
+@import "about";
 @import "print";
 
 * {
@@ -18,7 +19,7 @@
 body {
   @include background;
   background: $primaryColor;
-  color: #fff;
+  color: setTextColor($primaryColor);
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   height: 100%;
   line-height: 1.5;
@@ -39,7 +40,7 @@ body {
     }
   }
   a {
-    color: #fff;
+    color: setTextColor($primaryColor);
   }
   header {
     position: fixed;
@@ -52,15 +53,15 @@ body {
   }
 
   main {
-    padding: 65px;
-    height: 100%;
+    padding: 55px;
+    min-height: calc(100vh - 60px);
 
     .icons {
       a {
         padding: 10px;
 
         &:hover {
-          color: $secondaryColor;
+          color: setTextColor($secondaryColor);
           @include easeOut();
         }
       }

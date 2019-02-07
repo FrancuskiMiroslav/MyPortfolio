@@ -29,6 +29,14 @@ $background-opacity: 0.8;
   }
 }
 
+@function setTextColor($color) {
+  @if (lightness($color) > 40) {
+    @return #000;
+  } @else {
+    @return #fff;
+  }
+}
+
 @mixin mediaSM {
   @media screen and (max-width: 500px) {
     @content;
