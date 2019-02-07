@@ -1,3 +1,19 @@
+.btn, #work .btn-light, #work .btn-dark {
+  display: block;
+  padding: 8px 16px;
+  border: none;
+  margin-bottom: 6px; }
+  .btn:hover, #work .btn-light:hover, #work .btn-dark:hover {
+    background: #ce9416;
+    color: #642929; }
+
+#main-footer {
+  text-align: center;
+  padding: 16px;
+  background: #522222;
+  color: #fff;
+  height: 60px; }
+
 .menu-btn {
   position: absolute;
   z-index: 5;
@@ -159,19 +175,69 @@
     padding: 8px;
     border-bottom: 3px solid #ce9416; }
 
-#main-footer {
-  text-align: center;
-  padding: 16px;
-  background: #522222;
-  color: #fff;
-  height: 60px; }
-
 @media screen and (max-width: 768px) {
   body .about-info {
     grid-template-areas: "bioimage" "bio" "job1" "job2" "job3";
     grid-template-columns: 1fr; }
     body .about-info .bio-image {
       width: 70%; } }
+
+#work .projects {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px; }
+  #work .projects img {
+    width: 100%;
+    max-height: 300px;
+    border: 3px solid #fff; }
+    #work .projects img:hover {
+      opacity: 0.6;
+      border-color: #ce9416;
+      transition: all 0.8s ease-out; }
+
+#work .btn-light {
+  background: #7d3333; }
+
+#work .btn-dark {
+  background: #4b1f1f; }
+
+@media screen and (min-width: 1171px) {
+  main#work .projects {
+    grid-template-columns: repeat(4, 1fr); } }
+
+@media screen and (max-width: 768px) {
+  main#work .projects {
+    grid-template-columns: repeat(2, 1fr); } }
+
+@media screen and (max-width: 500px) {
+  main#work .projects {
+    grid-template-columns: 1fr; } }
+
+.boxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 16px; }
+  .boxes .box {
+    font-size: 32px;
+    border: 3px solid #ce9416;
+    padding: 8px 24px;
+    margin-bottom: 20px;
+    transition: all 0.8s ease-out; }
+    .boxes .box:hover {
+      padding: 24px 40px;
+      background: #ce9416;
+      color: #642929; }
+      .boxes .box:hover span {
+        color: #fff; }
+
+@media screen and (max-width: 500px) {
+  main#contact .boxes .box {
+    font-size: 16px; }
+    main#contact .boxes .box:hover {
+      font-size: 18px;
+      padding: 16px 30px; } }
 
 .test {
   width: 50%; }
@@ -230,9 +296,10 @@ body {
     padding: 55px;
     min-height: calc(100vh - 60px); }
     body main .icons a {
-      padding: 10px; }
+      padding: 8px;
+      margin: 0 10px; }
       body main .icons a:hover {
-        color: #000;
+        color: #ce9416;
         transition: all 0.8s ease-out; }
     body main#home {
       overflow: hidden; }

@@ -60,3 +60,22 @@ $background-opacity: 0.8;
     @content;
   }
 }
+
+.btn {
+  display: block;
+  padding: 8px 16px;
+  border: none;
+  margin-bottom: 6px;
+  &:hover {
+    background: $secondaryColor;
+    color: $primaryColor;
+  }
+}
+
+#main-footer {
+  text-align: center;
+  padding: 16px;
+  background: darken($color: $primaryColor, $amount: 5);
+  color: setTextColor($primaryColor);
+  height: 60px;
+}

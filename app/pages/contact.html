@@ -14,16 +14,20 @@
       href="https://fonts.googleapis.com/css?family=Roboto:300,400,700,900&amp;subset=cyrillic-ext"
       rel="stylesheet"
     />
-    <link rel="shortcut icon" type="image/png" href="../img/faviconHome.png" />
+    <link
+      rel="shortcut icon"
+      type="image/png"
+      href="../img/faviconContact.png"
+    />
     <!--build:css css/styles.min.css-->
-    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="../css/styles.css" />
     <!--endbuild-->
     <title>
-      Francuski Miroslav front-end
+      Contact Me
     </title>
   </head>
 
-  <body id="bg-img">
+  <body>
     <header>
       <div class="menu-btn">
         <div class="btn-line"></div>
@@ -35,45 +39,58 @@
           <div class="portrait"></div>
         </div>
         <ul class="menu-nav">
+          <li class="nav-item">
+            <a href="../index.html" class="nav-link">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="about.html" class="nav-link">About me</a>
+          </li>
+          <li class="nav-item">
+            <a href="work.html" class="nav-link">My Work</a>
+          </li>
           <li class="nav-item current">
-            <a href="index.html" class="nav-link">Home</a>
-          </li>
-          <li class="nav-item">
-            <a href="pages/about.html" class="nav-link">About me</a>
-          </li>
-          <li class="nav-item">
-            <a href="pages/work.html" class="nav-link">My Work</a>
-          </li>
-          <li class="nav-item">
-            <a href="pages/contact.html" class="nav-link">Contact</a>
+            <a href="contact.html" class="nav-link">Contact</a>
           </li>
         </ul>
       </nav>
     </header>
 
-    <main id="home">
+    <main id="contact">
       <h1 class="lg-heading">
-        <span class="text-secondary">Francuski </span> Miroslav
+        <span class="text-secondary">
+          Contact
+        </span>
+        Me
       </h1>
 
       <h2 class="sm-heading">
-        Front-end web developer
+        Feel free to contact me at any time...
       </h2>
-
-      <div class="icons">
-        <a href="#!">
-          <i class="fab fa-twitter fa-2x"></i>
-        </a>
-        <a href="https://www.facebook.com/Francuz86" target="_blank">
-          <i class="fab fa-facebook fa-2x"></i>
-        </a>
-        <a href="https://github.com/KaiserFranc" target="_blank">
-          <i class="fab fa-github fa-2x"></i>
-        </a>
+      <div class="boxes">
+        <div class="box">
+          <span class="text-secondary">
+            E-mail:
+          </span>
+          francuski.miroslav@gmail.com
+        </div>
+        <div class="box">
+          <span class="text-secondary">
+            Phone:
+          </span>
+          +38163*******
+        </div>
+        <div class="box">
+          <span class="text-secondary">
+            Skype:
+          </span>
+          kaiser.franc
+        </div>
       </div>
     </main>
 
-    <footer></footer>
+    <footer id="main-footer">
+      Copyright &copy; Francuski Miroslav 2019.
+    </footer>
     <!--build:js js/main.min.js -->
     <script
       type="text/javascript"
@@ -84,7 +101,7 @@
       integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
       crossorigin="anonymous"
     ></script>
-    <script src="js/main.js"></script>
+    <script src="../js/main.js"></script>
     <!-- endbuild -->
   </body>
 </html>

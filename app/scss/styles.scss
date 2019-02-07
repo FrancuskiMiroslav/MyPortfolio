@@ -1,6 +1,8 @@
 @import "config";
 @import "menu";
 @import "about";
+@import "work";
+@import "contact";
 @import "print";
 
 * {
@@ -58,10 +60,11 @@ body {
 
     .icons {
       a {
-        padding: 10px;
+        padding: 8px;
+        margin: 0 10px;
 
         &:hover {
-          color: setTextColor($secondaryColor);
+          color: $secondaryColor;
           @include easeOut();
         }
       }
