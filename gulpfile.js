@@ -76,7 +76,7 @@ gulp.task("images", function() {
           })
         )
       )
-      .pipe(gulp.dest("dist/images"))
+      .pipe(gulp.dest("dist/img"))
   );
 });
 
