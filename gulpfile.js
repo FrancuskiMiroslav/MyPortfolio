@@ -9,6 +9,7 @@ var imagemin = require("gulp-imagemin");
 var cache = require("gulp-cache");
 var del = require("del");
 var runSequence = require("run-sequence");
+const htmlmin = require("gulp-htmlmin");
 
 // Development Tasks
 // -----------------
@@ -35,10 +36,17 @@ gulp.task("sass", function() {
     );
 });
 
+gulp.task("minify", () => {
+  return gulp
+    .src("app/**/*.html")
+    .pipe(htmlmin({ collapseWhitespace: true }))
+    .pipe(gulp.dest("dist"));
+});
+
 // Watchers
 gulp.task("watch", function() {
   gulp.watch("app/scss/**/*.scss", ["sass"]);
-  gulp.watch("app/*.html", browserSync.reload);
+  gulp.watch("app/**/*.html", browserSync.reload);
   gulp.watch("app/js/**/*.js", browserSync.reload);
 });
 
@@ -59,7 +67,7 @@ gulp.task("useref", function() {
 gulp.task("images", function() {
   return (
     gulp
-      .src("app/images/**/*.+(png|jpg|jpeg|gif|svg)")
+      .src("app/img/**/*.+(png|jpg|jpeg|gif|svg)")
       // Caching images that ran through imagemin
       .pipe(
         cache(
@@ -95,7 +103,7 @@ gulp.task("default", function() {
   runSequence(
     "clean:dist",
     ["sass", "browserSync"],
-    ["useref", "images", "fonts"],
+    ["useref", "minify", "images", "fonts"],
     "watch"
   );
 });
