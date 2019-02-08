@@ -1,0 +1,81 @@
+$primaryColor: #642929;
+$secondaryColor: #ce9416;
+$show-home-image: true;
+$home-image: url(../img/background.jpg);
+$background-opacity: 0.8;
+
+@mixin easeOut {
+  transition: all 0.8s ease-out;
+}
+
+@mixin background {
+  @if $show-home-image {
+    &#bg-img {
+      background: $home-image;
+      background-attachment: fixed;
+      background-size: cover;
+
+      &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba($primaryColor, $background-opacity);
+        z-index: -100;
+      }
+    }
+  }
+}
+
+@function setTextColor($color) {
+  @if (lightness($color) > 40) {
+    @return #000;
+  } @else {
+    @return #fff;
+  }
+}
+
+@mixin mediaSM {
+  @media screen and (max-width: 500px) {
+    @content;
+  }
+}
+
+@mixin mediaMD {
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin mediaLG {
+  @media screen and (min-width: 769px) and (max-width: 1170px) {
+    @content;
+  }
+}
+
+@mixin mediaXL {
+  @media screen and (min-width: 1171px) {
+    @content;
+  }
+}
+
+.btn {
+  display: block;
+  padding: 8px 16px;
+  border: none;
+  margin-bottom: 6px;
+  &:hover {
+    background: $secondaryColor;
+    color: $primaryColor;
+  }
+}
+
+#main-footer {
+  text-align: center;
+  padding: 16px;
+  background: darken($color: $primaryColor, $amount: 5);
+  color: setTextColor($primaryColor);
+  height: 60px;
+}
