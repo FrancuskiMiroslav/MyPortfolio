@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Responsive portfolio website",
   "main": "gulpfile.js",
-  "homepage": "https://FrancuskiMiroslav.github.io/Responsive-portfolio-HTML-SCSS-JQ",
+  "homepage": "https://FrancuskiMiroslav.github.io/MyPortfolio",
   "dependencies": {
     "browser-sync": "^2.26.3",
     "del": "^3.0.0",
