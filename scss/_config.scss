@@ -8,6 +8,10 @@ $background-opacity: 0.8;
   transition: all 0.8s ease-out;
 }
 
+@mixin fixedFooter {
+  min-height: calc(100vh - 60px);
+}
+
 @mixin background {
   @if $show-home-image {
     &#bg-img {

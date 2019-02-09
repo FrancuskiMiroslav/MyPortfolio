@@ -56,7 +56,10 @@ body {
 
   main {
     padding: 55px;
-    min-height: calc(100vh - 60px);
+
+    &.fixFoot {
+      @include fixedFooter;
+    }
 
     .icons {
       a {

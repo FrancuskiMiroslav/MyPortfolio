@@ -151,26 +151,26 @@
     body main#home h1.lg-heading {
       margin-top: 12vh; } }
 
-.about-info {
+#about .about-info {
   display: grid;
   grid-gap: 30px;
   grid-template-areas: "bioimage bio bio" "job1 job2 job3";
   grid-template-columns: repeat(3, 1fr); }
-  .about-info .bio-image {
+  #about .about-info .bio-image {
     grid-area: bioimage;
     margin: auto;
     border-radius: 100px;
     border: 3px solid #ce9416; }
-  .about-info .bio {
+  #about .about-info .bio {
     grid-area: bio;
     font-size: 24px; }
-  .about-info .job-1 {
+  #about .about-info .job-1 {
     grid-area: job1; }
-  .about-info .job-2 {
+  #about .about-info .job-2 {
     grid-area: job2; }
-  .about-info .job-3 {
+  #about .about-info .job-3 {
     grid-area: job3; }
-  .about-info .job {
+  #about .about-info .job {
     background: #763030;
     padding: 8px;
     border-bottom: 3px solid #ce9416; }
@@ -213,23 +213,23 @@
   main#work .projects {
     grid-template-columns: 1fr; } }
 
-.boxes {
+#contact .boxes {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
   align-items: center;
   margin-top: 16px; }
-  .boxes .box {
+  #contact .boxes .box {
     font-size: 32px;
     border: 3px solid #ce9416;
     padding: 8px 24px;
     margin-bottom: 20px;
     transition: all 0.8s ease-out; }
-    .boxes .box:hover {
+    #contact .boxes .box:hover {
       padding: 24px 40px;
       background: #ce9416;
       color: #642929; }
-      .boxes .box:hover span {
+      #contact .boxes .box:hover span {
         color: #fff; }
 
 @media screen and (max-width: 500px) {
@@ -293,8 +293,9 @@ body {
   body .text-secondary {
     color: #ce9416; }
   body main {
-    padding: 55px;
-    min-height: calc(100vh - 60px); }
+    padding: 55px; }
+    body main.fixFoot {
+      min-height: calc(100vh - 60px); }
     body main .icons a {
       padding: 8px;
       margin: 0 10px; }
