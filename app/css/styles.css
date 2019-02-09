@@ -1,19 +1,3 @@
-.btn, #work .btn-light, #work .btn-dark {
-  display: block;
-  padding: 8px 16px;
-  border: none;
-  margin-bottom: 6px; }
-  .btn:hover, #work .btn-light:hover, #work .btn-dark:hover {
-    background: #ce9416;
-    color: #642929; }
-
-#main-footer {
-  text-align: center;
-  padding: 16px;
-  background: #522222;
-  color: #fff;
-  height: 60px; }
-
 .menu-btn {
   position: absolute;
   z-index: 5;
@@ -151,26 +135,26 @@
     body main#home h1.lg-heading {
       margin-top: 12vh; } }
 
-#about .about-info {
+.about-info {
   display: grid;
   grid-gap: 30px;
   grid-template-areas: "bioimage bio bio" "job1 job2 job3";
   grid-template-columns: repeat(3, 1fr); }
-  #about .about-info .bio-image {
+  .about-info .bio-image {
     grid-area: bioimage;
     margin: auto;
     border-radius: 100px;
     border: 3px solid #ce9416; }
-  #about .about-info .bio {
+  .about-info .bio {
     grid-area: bio;
     font-size: 24px; }
-  #about .about-info .job-1 {
+  .about-info .job-1 {
     grid-area: job1; }
-  #about .about-info .job-2 {
+  .about-info .job-2 {
     grid-area: job2; }
-  #about .about-info .job-3 {
+  .about-info .job-3 {
     grid-area: job3; }
-  #about .about-info .job {
+  .about-info .job {
     background: #763030;
     padding: 8px;
     border-bottom: 3px solid #ce9416; }
@@ -306,3 +290,19 @@ body {
       overflow: hidden; }
       body main#home h1 {
         margin-top: 20vh; }
+
+.btn, #work .btn-light, #work .btn-dark {
+  display: block;
+  padding: 8px 16px;
+  border: none;
+  margin-bottom: 6px; }
+  .btn:hover, #work .btn-light:hover, #work .btn-dark:hover {
+    background: #ce9416;
+    color: #642929; }
+
+#main-footer {
+  text-align: center;
+  padding: 16px;
+  background: #522222;
+  color: #fff;
+  height: 60px; }
