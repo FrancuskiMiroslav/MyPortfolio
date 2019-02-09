@@ -39,7 +39,7 @@ gulp.task("sass", function() {
 gulp.task("minify", () => {
   return gulp
     .src("app/**/*.html")
-    .pipe(htmlmin({ collapseWhitespace: true }))
+    .pipe(htmlmin({ collapseWhitespace: true, removeComments: true }))
     .pipe(gulp.dest("dist"));
 });
 
@@ -103,7 +103,8 @@ gulp.task("default", function() {
   runSequence(
     "clean:dist",
     ["sass", "browserSync"],
-    ["useref", "minify", "images", "fonts"],
+    ["useref", "images", "fonts"],
+    "minify",
     "watch"
   );
 });
