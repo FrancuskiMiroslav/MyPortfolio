@@ -748,35 +748,30 @@ body main {
   padding: 55px;
 }
 
-/* line 60, src/sass/styles.scss */
-body main.fixFoot {
-  min-height: calc(100vh - 60px);
-}
-
-/* line 65, src/sass/styles.scss */
+/* line 61, src/sass/styles.scss */
 body main .icons a {
   padding: 8px;
   margin: 0 10px;
 }
 
-/* line 69, src/sass/styles.scss */
+/* line 65, src/sass/styles.scss */
 body main .icons a:hover {
   color: #ce9416;
   -webkit-transition: all 0.8s ease-out;
   transition: all 0.8s ease-out;
 }
 
-/* line 76, src/sass/styles.scss */
+/* line 72, src/sass/styles.scss */
 body main#home {
   overflow: hidden;
 }
 
-/* line 78, src/sass/styles.scss */
+/* line 74, src/sass/styles.scss */
 body main#home h1 {
   margin-top: 20vh;
 }
 
-/* line 85, src/sass/styles.scss */
+/* line 81, src/sass/styles.scss */
 .btn, #work .btn-light, #work .btn-dark {
   display: block;
   padding: 8px 16px;
@@ -785,7 +780,7 @@ body main#home h1 {
   border-width: 0 1px;
 }
 
-/* line 92, src/sass/styles.scss */
+/* line 88, src/sass/styles.scss */
 .btn:hover, #work .btn-light:hover, #work .btn-dark:hover {
   background: #ce9416;
   color: #642929;
@@ -793,22 +788,16 @@ body main#home h1 {
   transition: all 0.8s ease-out;
 }
 
-/* line 99, src/sass/styles.scss */
+/* line 95, src/sass/styles.scss */
 .main-footer {
   text-align: center;
+  padding: 16px;
   background: #522222;
   color: #fff;
   height: 60px;
 }
 
-@media (max-width: 500px) {
-  /* line 99, src/sass/styles.scss */
-  .main-footer {
-    height: 0;
-  }
-}
-
-/* line 108, src/sass/styles.scss */
+/* line 102, src/sass/styles.scss */
 .main-footer__copy {
   color: #ce9416;
 }
