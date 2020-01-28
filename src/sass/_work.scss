@@ -12,12 +12,18 @@
         cursor: pointer;
         transition: all 0.5s ease-in-out;
         &:hover {
-          background: rgba($color: $secondaryColor, $alpha: 0.6);
-          color: rgba($color: #fff, $alpha: 1);
+          background-color: $secondaryColor;
+          color: rgba(lighten($color: $primaryColor, $amount: 7), 1);
+          transition: 0.8s;
+          cursor: pointer;
         }
 
         &.active {
           background: rgba($color: $secondaryColor, $alpha: 1);
+          &:hover {
+            color: $primaryColor;
+            transition: 0.8s;
+          }
         }
       }
     }
@@ -34,7 +40,6 @@
 
       @include media-max-width(870) {
         width: 100%;
-        margin: 0 auto;
       }
     }
 

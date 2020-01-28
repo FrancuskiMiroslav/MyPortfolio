@@ -353,16 +353,26 @@
 
 /* line 14, src/sass/_work.scss */
 #work .portfolio-menu ul li:hover {
-  background: rgba(206, 148, 22, 0.6);
-  color: white;
+  background-color: #ce9416;
+  color: #7d3333;
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
+  cursor: pointer;
 }
 
-/* line 19, src/sass/_work.scss */
+/* line 21, src/sass/_work.scss */
 #work .portfolio-menu ul li.active {
   background: #ce9416;
 }
 
-/* line 26, src/sass/_work.scss */
+/* line 23, src/sass/_work.scss */
+#work .portfolio-menu ul li.active:hover {
+  color: #642929;
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
+}
+
+/* line 32, src/sass/_work.scss */
 #work .projects {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -371,7 +381,7 @@
       flex-wrap: wrap;
 }
 
-/* line 30, src/sass/_work.scss */
+/* line 36, src/sass/_work.scss */
 #work .projects .item {
   width: 368px;
   text-align: center;
@@ -379,21 +389,20 @@
 }
 
 @media (max-width: 870px) {
-  /* line 30, src/sass/_work.scss */
+  /* line 36, src/sass/_work.scss */
   #work .projects .item {
     width: 100%;
-    margin: 0 auto;
   }
 }
 
-/* line 41, src/sass/_work.scss */
+/* line 46, src/sass/_work.scss */
 #work .projects__hover {
   overflow: hidden;
   margin-bottom: 6px;
   height: 500px;
 }
 
-/* line 47, src/sass/_work.scss */
+/* line 52, src/sass/_work.scss */
 #work .projects img {
   width: 100%;
   height: 500px;
@@ -404,7 +413,7 @@
      object-position: top;
 }
 
-/* line 53, src/sass/_work.scss */
+/* line 58, src/sass/_work.scss */
 #work .projects img:hover {
   -webkit-transition: all 0.8s ease-out;
   transition: all 0.8s ease-out;
@@ -415,13 +424,13 @@
   cursor: crosshair;
 }
 
-/* line 62, src/sass/_work.scss */
+/* line 67, src/sass/_work.scss */
 #work .btn-light {
   background: #7d3333;
   border-color: #4b1f1f;
 }
 
-/* line 68, src/sass/_work.scss */
+/* line 73, src/sass/_work.scss */
 #work .btn-dark {
   background: #4b1f1f;
   border-color: #7d3333;
@@ -495,14 +504,15 @@
 #contact .boxes .box:hover {
   background: #ce9416;
   color: #642929;
+  cursor: crosshair;
 }
 
-/* line 43, src/sass/_contact.scss */
+/* line 44, src/sass/_contact.scss */
 #contact .boxes .box:hover span {
   color: #fff;
 }
 
-/* line 50, src/sass/_contact.scss */
+/* line 51, src/sass/_contact.scss */
 #contact .form {
   background: -webkit-gradient(linear, left bottom, left top, from(rgba(75, 31, 31, 0.9)), to(rgba(125, 51, 51, 0.9)));
   background: linear-gradient(0deg, rgba(75, 31, 31, 0.9) 0%, rgba(125, 51, 51, 0.9) 100%);
@@ -513,22 +523,22 @@
 }
 
 @media (max-width: 1100px) {
-  /* line 50, src/sass/_contact.scss */
+  /* line 51, src/sass/_contact.scss */
   #contact .form {
     margin-top: 20px;
     width: 100%;
   }
 }
 
-/* line 66, src/sass/_contact.scss */
+/* line 67, src/sass/_contact.scss */
 #contact .form select,
 #contact .form textarea,
 #contact .form input {
   padding: 10px;
-  border: 1px solid #642929;
+  border: 1px solid #ce9416;
 }
 
-/* line 73, src/sass/_contact.scss */
+/* line 74, src/sass/_contact.scss */
 #contact .form_row {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -538,26 +548,59 @@
           justify-content: space-between;
 }
 
-/* line 77, src/sass/_contact.scss */
-#contact .form_row select {
-  width: 21%;
+@media (max-width: 500px) {
+  /* line 74, src/sass/_contact.scss */
+  #contact .form_row {
+    display: block;
+  }
 }
 
 /* line 81, src/sass/_contact.scss */
+#contact .form_row select {
+  width: 21%;
+  color: #7d3333;
+  background-color: #ce9416;
+}
+
+/* line 85, src/sass/_contact.scss */
+#contact .form_row select:hover {
+  background-color: #7d3333;
+  color: #ce9416;
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
+  cursor: pointer;
+}
+
+@media (max-width: 500px) {
+  /* line 81, src/sass/_contact.scss */
+  #contact .form_row select {
+    width: auto;
+  }
+}
+
+/* line 96, src/sass/_contact.scss */
 #contact .form_row input[type="text"] {
   width: 75%;
 }
 
-/* line 86, src/sass/_contact.scss */
+@media (max-width: 500px) {
+  /* line 96, src/sass/_contact.scss */
+  #contact .form_row input[type="text"] {
+    width: 100%;
+  }
+}
+
+/* line 104, src/sass/_contact.scss */
 #contact .form input[type="email"],
 #contact .form textarea {
   display: block;
   width: 100%;
   margin-top: 28px;
+  margin-bottom: 28px;
 }
 
 @media (max-width: 500px) {
-  /* line 93, src/sass/_contact.scss */
+  /* line 112, src/sass/_contact.scss */
   #contact .form .netlify-recaptcha {
     -webkit-transform: scale(0.7);
             transform: scale(0.7);
@@ -567,7 +610,7 @@
 }
 
 @media (max-width: 400px) {
-  /* line 93, src/sass/_contact.scss */
+  /* line 112, src/sass/_contact.scss */
   #contact .form .netlify-recaptcha {
     -webkit-transform: scale(0.5);
             transform: scale(0.5);
@@ -576,7 +619,7 @@
   }
 }
 
-/* line 104, src/sass/_contact.scss */
+/* line 123, src/sass/_contact.scss */
 #contact .form .btn, #contact .form #work .btn-light, #work #contact .form .btn-light, #contact .form #work .btn-dark, #work #contact .form .btn-dark {
   background-color: #ce9416;
   border: none;
@@ -592,14 +635,17 @@
   cursor: pointer;
 }
 
-/* line 118, src/sass/_contact.scss */
+/* line 137, src/sass/_contact.scss */
 #contact .form .btn:hover, #contact .form #work .btn-light:hover, #work #contact .form .btn-light:hover, #contact .form #work .btn-dark:hover, #work #contact .form .btn-dark:hover {
   background-color: #642929;
   color: #ce9416;
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
+  border: 1px solid #ce9416;
 }
 
 @media screen and (max-width: 500px) {
-  /* line 130, src/sass/_contact.scss */
+  /* line 151, src/sass/_contact.scss */
   main#contact .boxes .box:hover {
     font-size: 18px;
     padding: 16px 30px;
@@ -743,9 +789,11 @@ body main#home h1 {
 .btn:hover, #work .btn-light:hover, #work .btn-dark:hover {
   background: #ce9416;
   color: #642929;
+  -webkit-transition: all 0.8s ease-out;
+  transition: all 0.8s ease-out;
 }
 
-/* line 98, src/sass/styles.scss */
+/* line 99, src/sass/styles.scss */
 .main-footer {
   text-align: center;
   padding: 16px;
@@ -754,7 +802,7 @@ body main#home h1 {
   height: 60px;
 }
 
-/* line 105, src/sass/styles.scss */
+/* line 106, src/sass/styles.scss */
 .main-footer__copy {
   color: #ce9416;
 }

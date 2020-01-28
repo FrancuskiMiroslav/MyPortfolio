@@ -40,6 +40,7 @@
       &:hover {
         background: $secondaryColor;
         color: $primaryColor;
+        cursor: crosshair;
         span {
           color: setTextColor($primaryColor);
         }
@@ -67,19 +68,36 @@
     textarea,
     input {
       padding: 10px;
-      border: 1px solid $primaryColor;
+      border: 1px solid $secondaryColor;
     }
 
     &_row {
       display: flex;
       justify-content: space-between;
+      @include media-max-width(500) {
+        display: block;
+      }
 
       select {
         width: 21%;
+        color: rgba(lighten($color: $primaryColor, $amount: 7), 1);
+        background-color: $secondaryColor;
+        &:hover {
+          background-color: rgba(lighten($color: $primaryColor, $amount: 7), 1);
+          color: $secondaryColor;
+          transition: 0.8s;
+          cursor: pointer;
+        }
+        @include media-max-width(500) {
+          width: auto;
+        }
       }
 
       input[type="text"] {
         width: 75%;
+        @include media-max-width(500) {
+          width: 100%;
+        }
       }
     }
 
@@ -88,6 +106,7 @@
       display: block;
       width: 100%;
       margin-top: 28px;
+      margin-bottom: 28px;
     }
 
     .netlify-recaptcha {
@@ -118,6 +137,8 @@
       &:hover {
         background-color: $primaryColor;
         color: $secondaryColor;
+        transition: 0.8s;
+        border: 1px solid $secondaryColor;
       }
     }
   }

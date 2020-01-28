@@ -92,6 +92,7 @@ body {
   &:hover {
     background: $secondaryColor;
     color: $primaryColor;
+    @include easeOut;
   }
 }
 
