@@ -98,10 +98,12 @@ body {
 
 .main-footer {
   text-align: center;
-  padding: 16px;
   background: darken($color: $primaryColor, $amount: 5);
   color: setTextColor($primaryColor);
   height: 60px;
+  @include media-max-width(500) {
+    height: 0;
+  }
 
   &__copy {
     color: $secondaryColor;
