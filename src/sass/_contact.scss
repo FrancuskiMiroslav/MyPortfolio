@@ -13,6 +13,9 @@
       rgba(darken($color: $primaryColor, $amount: 7), 0.9) 0%,
       rgba(lighten($color: $primaryColor, $amount: 7), 0.9) 100%
     );
+    @include media-max-width(500) {
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
 
     .box {
       border: 3px solid $secondaryColor;
@@ -24,6 +27,9 @@
       align-items: center;
       justify-content: center;
       font-size: 20px;
+      @include media-max-width(500) {
+        font-size: 12px;
+      }
 
       @include easeOut;
 
@@ -83,6 +89,18 @@
       width: 100%;
       margin-top: 28px;
     }
+
+    .netlify-recaptcha {
+      @include media-max-width(500) {
+        transform: scale(0.7);
+        transform-origin: 0 0;
+      }
+      @include media-max-width(400) {
+        transform: scale(0.5);
+        transform-origin: 0 0;
+      }
+    }
+
     .btn {
       background-color: $secondaryColor;
       border: none;
@@ -109,7 +127,6 @@
   main#contact {
     .boxes {
       .box {
-        font-size: 16px;
         &:hover {
           font-size: 18px;
           padding: 16px 30px;

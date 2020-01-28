@@ -447,7 +447,14 @@
   background: linear-gradient(180deg, rgba(75, 31, 31, 0.9) 0%, rgba(125, 51, 51, 0.9) 100%);
 }
 
-/* line 17, src/sass/_contact.scss */
+@media (max-width: 500px) {
+  /* line 5, src/sass/_contact.scss */
+  #contact .boxes {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+}
+
+/* line 20, src/sass/_contact.scss */
 #contact .boxes .box {
   border: 3px solid #ce9416;
   padding: 8px 24px;
@@ -471,24 +478,31 @@
   transition: all 0.8s ease-out;
 }
 
-/* line 30, src/sass/_contact.scss */
+@media (max-width: 500px) {
+  /* line 20, src/sass/_contact.scss */
+  #contact .boxes .box {
+    font-size: 12px;
+  }
+}
+
+/* line 36, src/sass/_contact.scss */
 #contact .boxes .box i {
   display: block;
   margin-bottom: 20px;
 }
 
-/* line 34, src/sass/_contact.scss */
+/* line 40, src/sass/_contact.scss */
 #contact .boxes .box:hover {
   background: #ce9416;
   color: #642929;
 }
 
-/* line 37, src/sass/_contact.scss */
+/* line 43, src/sass/_contact.scss */
 #contact .boxes .box:hover span {
   color: #fff;
 }
 
-/* line 44, src/sass/_contact.scss */
+/* line 50, src/sass/_contact.scss */
 #contact .form {
   background: -webkit-gradient(linear, left bottom, left top, from(rgba(75, 31, 31, 0.9)), to(rgba(125, 51, 51, 0.9)));
   background: linear-gradient(0deg, rgba(75, 31, 31, 0.9) 0%, rgba(125, 51, 51, 0.9) 100%);
@@ -499,14 +513,14 @@
 }
 
 @media (max-width: 1100px) {
-  /* line 44, src/sass/_contact.scss */
+  /* line 50, src/sass/_contact.scss */
   #contact .form {
     margin-top: 20px;
     width: 100%;
   }
 }
 
-/* line 60, src/sass/_contact.scss */
+/* line 66, src/sass/_contact.scss */
 #contact .form select,
 #contact .form textarea,
 #contact .form input {
@@ -514,7 +528,7 @@
   border: 1px solid #642929;
 }
 
-/* line 67, src/sass/_contact.scss */
+/* line 73, src/sass/_contact.scss */
 #contact .form_row {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -524,17 +538,17 @@
           justify-content: space-between;
 }
 
-/* line 71, src/sass/_contact.scss */
+/* line 77, src/sass/_contact.scss */
 #contact .form_row select {
   width: 21%;
 }
 
-/* line 75, src/sass/_contact.scss */
+/* line 81, src/sass/_contact.scss */
 #contact .form_row input[type="text"] {
   width: 75%;
 }
 
-/* line 80, src/sass/_contact.scss */
+/* line 86, src/sass/_contact.scss */
 #contact .form input[type="email"],
 #contact .form textarea {
   display: block;
@@ -542,7 +556,27 @@
   margin-top: 28px;
 }
 
-/* line 86, src/sass/_contact.scss */
+@media (max-width: 500px) {
+  /* line 93, src/sass/_contact.scss */
+  #contact .form .netlify-recaptcha {
+    -webkit-transform: scale(0.7);
+            transform: scale(0.7);
+    -webkit-transform-origin: 0 0;
+            transform-origin: 0 0;
+  }
+}
+
+@media (max-width: 400px) {
+  /* line 93, src/sass/_contact.scss */
+  #contact .form .netlify-recaptcha {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+    -webkit-transform-origin: 0 0;
+            transform-origin: 0 0;
+  }
+}
+
+/* line 104, src/sass/_contact.scss */
 #contact .form .btn, #contact .form #work .btn-light, #work #contact .form .btn-light, #contact .form #work .btn-dark, #work #contact .form .btn-dark {
   background-color: #ce9416;
   border: none;
@@ -558,18 +592,14 @@
   cursor: pointer;
 }
 
-/* line 100, src/sass/_contact.scss */
+/* line 118, src/sass/_contact.scss */
 #contact .form .btn:hover, #contact .form #work .btn-light:hover, #work #contact .form .btn-light:hover, #contact .form #work .btn-dark:hover, #work #contact .form .btn-dark:hover {
   background-color: #642929;
   color: #ce9416;
 }
 
 @media screen and (max-width: 500px) {
-  /* line 111, src/sass/_contact.scss */
-  main#contact .boxes .box {
-    font-size: 16px;
-  }
-  /* line 113, src/sass/_contact.scss */
+  /* line 130, src/sass/_contact.scss */
   main#contact .boxes .box:hover {
     font-size: 18px;
     padding: 16px 30px;
