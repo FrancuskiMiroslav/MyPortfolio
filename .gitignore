@@ -53,9 +53,3 @@ Thumbs.db
 *.DS_Store
 .AppleDouble
 .LSOverride
-
-.sass-cache/
-*.css.map
-*.sass.map
-*.scss.map
-*.css
