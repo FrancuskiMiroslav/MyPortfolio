@@ -1,0 +1,186 @@
+@mixin main {
+  html {
+    height: 100%;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+    font-family: $main_font, $secondary_font, Verdana, Geneva, Tahoma,
+      sans-serif;
+  }
+
+  *,
+  *:before,
+  *:after {
+    box-sizing: inherit;
+    padding: 0;
+    margin: 0;
+  }
+
+  ul,
+  ol {
+    list-style: none;
+  }
+
+  a {
+    text-decoration: none;
+    color: #ffffff;
+  }
+}
+
+@mixin easeOut {
+  transition: all 0.8s ease-out;
+}
+
+@mixin fixedFooter {
+  min-height: calc(100vh - 60px);
+}
+
+@mixin background {
+  @if $show-home-image {
+    &#bg-img {
+      background: $home-image;
+      background-attachment: fixed;
+      background-size: cover;
+
+      &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba($primaryColor, $background-opacity);
+        z-index: -100;
+      }
+    }
+  }
+}
+
+@mixin media-max-width($point) {
+  @media (max-width: #{$point}px) {
+    @content;
+  }
+}
+
+@mixin media-min-width($point) {
+  @media (min-width: #{$point}px) {
+    @content;
+  }
+}
+
+@mixin clearfix {
+  &:before,
+  &:after {
+    content: "";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+@mixin css3-prefix($prop, $value) {
+  -webkit-#{$prop}: #{$value};
+  -moz-#{$prop}: #{$value};
+  -ms-#{$prop}: #{$value};
+  -o-#{$prop}: #{$value};
+  #{$prop}: #{$value};
+}
+
+@mixin font-face($name, $file) {
+  @font-face {
+    font-family: "#{$name}";
+    src: url("../fonts/#{$file}.eot");
+    src: url("../fonts/#{$file}.eot?#iefix") format("embedded-opentype"),
+      url("../fonts/#{$file}.woff") format("woff"),
+      url("../fonts/#{$file}.ttf") format("truetype"),
+      url("../fonts/#{$file}.svg?#webfont") format("svg");
+  }
+}
+
+@mixin btn {
+  display: block;
+  padding: 8px 16px;
+  margin-bottom: 6px;
+  border-style: solid;
+  border-width: 0 1px;
+
+  &:hover {
+    background: $secondaryColor;
+    color: $primaryColor;
+    @include easeOut;
+  }
+}
+
+@mixin wrapper($max-width, $padding) {
+  max-width: #{$max-width}px;
+  margin: 0 auto;
+  padding: 0 #{$padding}px;
+}
+
+@mixin mediaMD {
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin animation-bar {
+  text-align: left;
+  position: relative;
+  display: block;
+  width: 90%;
+  padding: 5px;
+  font-size: 16px;
+  line-height: 16px;
+  border-radius: 30px;
+  margin-top: auto;
+  background: rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.25),
+    0 1px rgba(255, 255, 255, 0.08);
+
+  & span {
+    text-align: right;
+    color: $primaryColor;
+    font-weight: bold;
+    padding-right: 5px;
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    height: 20px;
+    border-radius: 10px 0 0 10px;
+    overflow: hidden;
+    background-size: 100%;
+    background-image: linear-gradient(to right, $primaryColor, $secondaryColor);
+
+    &:after {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      content: "";
+      background-size: 100%;
+      background-image: linear-gradient(
+        45deg,
+        #ffffff 25%,
+        rgba(0, 0, 0, 0) 25%,
+        rgba(0, 0, 0, 0) 50%,
+        #ffffff 50%,
+        #ffffff 75%,
+        rgba(0, 0, 0, 0) 75%,
+        rgba(0, 0, 0, 0)
+      );
+      background-size: 50px 50px;
+      animation: progress-anim-80-after 1s infinite linear;
+      opacity: 0.1;
+    }
+
+    @keyframes progress-anim-after {
+      0% {
+        background-position: 0 100%;
+      }
+      100% {
+        background-position: 50px 100%;
+      }
+    }
+  }
+}

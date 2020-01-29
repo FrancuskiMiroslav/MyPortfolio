@@ -128,12 +128,6 @@
   }
 }
 
-@include mediaXL {
-}
-
-@include mediaLG {
-}
-
 @include mediaMD {
   body {
     .menu {
@@ -188,9 +182,11 @@
   }
 }
 
-@include mediaSM {
-  body {
-    main#home {
+body {
+  main#home {
+    @include media-max-width(870) {
+      width: 100%;
+
       padding: 30px;
       @include easeOut;
 

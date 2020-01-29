@@ -1,0 +1,185 @@
+.about {
+  &__content {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(2, 1fr) repeat(3, 0);
+    grid-gap: 30px;
+    @include media-max-width(800) {
+      display: block;
+    }
+    .card {
+      margin-bottom: 30px;
+      grid-area: 1 / 1 / 3 / 3;
+      &__content {
+        text-align: center;
+        position: relative;
+        transition: transform 3s;
+        padding: 50%;
+        transform-style: preserve-3d;
+      }
+
+      &__front,
+      &__back {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding: 2rem;
+        backface-visibility: hidden;
+        transform-style: preserve-3d;
+        &:before {
+          content: "";
+          position: absolute;
+          top: $spacer;
+          bottom: $spacer;
+          left: $spacer;
+          right: $spacer;
+          border: 3px solid currentColor;
+          transform: $level-one;
+        }
+      }
+
+      &:hover .card__content {
+        transform: rotateY(0.5turn);
+        cursor: pointer;
+      }
+      &__title {
+        font-size: 2.5rem;
+        transform: $level-three;
+        order: 2;
+        text-transform: uppercase;
+      }
+
+      &__body {
+        transform: $level-two;
+        font-weight: $fw-normal;
+        font-size: 1.5rem;
+        line-height: 1.6;
+      }
+
+      &__subtitle {
+        transform: $level-two;
+        text-transform: uppercase;
+        letter-spacing: 4px;
+        font-size: 1.75rem;
+        font-weight: $fw-bold;
+        opacity: 0.7;
+      }
+
+      &__front {
+        background-color: $primaryColor;
+        background-image: url(../images/FB_IMG_1576240369067.jpg);
+        background-size: cover;
+        background-blend-mode: hard-light;
+        color: $secondaryColor;
+        background-position: center;
+      }
+
+      &__back {
+        transform: rotateY(0.5turn);
+        background: $secondaryColor;
+        color: $primaryColor;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+    }
+  }
+
+  &__info {
+    grid-area: 1 / 3 / 3 / 6;
+    display: grid;
+    grid-gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+
+    .skills {
+      background: lighten($color: $primaryColor, $amount: 5);
+      padding: 12px;
+      border-bottom: 3px solid $secondaryColor;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      h3 {
+        color: $secondaryColor;
+        margin-bottom: 1rem;
+      }
+
+      h6 {
+        font-size: 1rem;
+      }
+      p {
+        margin-bottom: 1rem;
+      }
+    }
+
+    .animation-bar-90 {
+      @include animation-bar;
+      & span {
+        animation: progress-anim-90 4s linear;
+        width: 90%;
+      }
+
+      @keyframes progress-anim-90 {
+        0% {
+          width: 0%;
+        }
+        100% {
+          width: 90%;
+        }
+      }
+    }
+
+    .animation-bar-80 {
+      @include animation-bar;
+      & span {
+        animation: progress-anim-80 4s linear;
+        width: 80%;
+      }
+
+      @keyframes progress-anim-80 {
+        0% {
+          width: 0%;
+        }
+        100% {
+          width: 80%;
+        }
+      }
+    }
+
+    .animation-bar-70 {
+      @include animation-bar;
+      & span {
+        animation: progress-anim-70 4s linear;
+        width: 70%;
+      }
+
+      @keyframes progress-anim-70 {
+        0% {
+          width: 0%;
+        }
+        100% {
+          width: 70%;
+        }
+      }
+    }
+
+    .animation-bar-40 {
+      @include animation-bar;
+      & span {
+        animation: progress-anim-40 4s linear;
+        width: 40%;
+      }
+
+      @keyframes progress-anim-40 {
+        0% {
+          width: 0%;
+        }
+        100% {
+          width: 40%;
+        }
+      }
+    }
+  }
+}

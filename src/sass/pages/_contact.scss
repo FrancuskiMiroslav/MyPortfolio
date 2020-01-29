@@ -1,7 +1,13 @@
+body {
+  &.contact {
+    background-image: url(../images/contactBkg.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+  }
+}
+
 #contact {
-  background-image: url(../images/contactBkg.jpg);
-  background-size: cover;
-  background-position: center;
   .boxes {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -29,6 +35,11 @@
       font-size: 20px;
       @include media-max-width(500) {
         font-size: 12px;
+      }
+      &:hover {
+        @include media-max-width(500) {
+          font-size: 16px;
+        }
       }
 
       @include easeOut;
@@ -139,19 +150,6 @@
         color: $secondaryColor;
         transition: 0.8s;
         border: 1px solid $secondaryColor;
-      }
-    }
-  }
-}
-
-@include mediaSM {
-  main#contact {
-    .boxes {
-      .box {
-        &:hover {
-          font-size: 18px;
-          padding: 16px 30px;
-        }
       }
     }
   }
