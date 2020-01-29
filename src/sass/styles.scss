@@ -43,6 +43,12 @@ body {
     width: 100%;
   }
 
+  .text-primary {
+    text-transform: uppercase;
+    color: rgba(darken($primaryColor, 5), 1);
+    font-weight: bold;
+  }
+
   .text-secondary {
     color: $secondaryColor;
   }

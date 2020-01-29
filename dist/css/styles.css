@@ -336,8 +336,8 @@
   left: 3vh;
   right: 3vh;
   border: 3px solid currentColor;
-  -webkit-transform: translateZ(3rem);
-          transform: translateZ(3rem);
+  -webkit-transform: translateZ(6rem);
+          transform: translateZ(6rem);
 }
 
 /* line 40, src/sass/pages/_about.scss */
@@ -349,8 +349,8 @@
 
 /* line 44, src/sass/pages/_about.scss */
 .about__content .card__title {
-  -webkit-transform: translateZ(9rem);
-          transform: translateZ(9rem);
+  -webkit-transform: translateZ(3rem);
+          transform: translateZ(3rem);
   -webkit-box-ordinal-group: 3;
       -ms-flex-order: 2;
           order: 2;
@@ -374,8 +374,8 @@
 
 /* line 59, src/sass/pages/_about.scss */
 .about__content .card__subtitle {
-  -webkit-transform: translateZ(6rem);
-          transform: translateZ(6rem);
+  -webkit-transform: translateZ(9rem);
+          transform: translateZ(9rem);
   text-transform: uppercase;
   letter-spacing: 4px;
   font-weight: 700;
@@ -392,12 +392,66 @@
   background-position: center;
 }
 
-/* line 76, src/sass/pages/_about.scss */
+/* line 75, src/sass/pages/_about.scss */
+.about__content .card__front .speech-bubble {
+  position: relative;
+  background: #763030;
+  border-radius: 50px;
+  -webkit-transform: translateZ(3rem);
+          transform: translateZ(3rem);
+  width: 28%;
+  font-size: 0.5rem;
+  position: absolute;
+  top: 36%;
+  left: 10%;
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media (max-width: 1100px) {
+  /* line 75, src/sass/pages/_about.scss */
+  .about__content .card__front .speech-bubble {
+    top: 25%;
+  }
+}
+
+/* line 93, src/sass/pages/_about.scss */
+.about__content .card__front .speech-bubble:after {
+  content: "";
+  position: absolute;
+  bottom: 32px;
+  left: 80%;
+  border: 25px solid transparent;
+  border-top-color: #763030;
+  border-bottom: 0;
+  border-right: 0;
+  margin-left: -23px;
+  margin-bottom: -48px;
+}
+
+@media (max-width: 400px) {
+  /* line 93, src/sass/pages/_about.scss */
+  .about__content .card__front .speech-bubble:after {
+    margin-left: -39px;
+    margin-bottom: -42px;
+  }
+}
+
+/* line 112, src/sass/pages/_about.scss */
 .about__content .card__back {
   -webkit-transform: rotateY(0.5turn);
           transform: rotateY(0.5turn);
-  background: #ce9416;
-  color: #642929;
+  background: #763030;
+  color: #ce9416;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -407,9 +461,10 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  cursor: default;
 }
 
-/* line 87, src/sass/pages/_about.scss */
+/* line 124, src/sass/pages/_about.scss */
 .about__info {
   grid-area: 1 / 3 / 3 / 6;
   display: grid;
@@ -417,7 +472,7 @@
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
 
-/* line 93, src/sass/pages/_about.scss */
+/* line 130, src/sass/pages/_about.scss */
 .about__info .skills {
   background: #763030;
   padding: 12px;
@@ -434,24 +489,25 @@
       justify-content: space-around;
 }
 
-/* line 101, src/sass/pages/_about.scss */
+/* line 138, src/sass/pages/_about.scss */
 .about__info .skills h3 {
   color: #ce9416;
   margin-bottom: 1rem;
+  font-weight: bold;
 }
 
-/* line 106, src/sass/pages/_about.scss */
+/* line 144, src/sass/pages/_about.scss */
 .about__info .skills h6 {
   font-size: 1em;
   color: #e5a518;
 }
 
-/* line 110, src/sass/pages/_about.scss */
+/* line 148, src/sass/pages/_about.scss */
 .about__info .skills p {
   margin-bottom: 1rem;
 }
 
-/* line 115, src/sass/pages/_about.scss */
+/* line 153, src/sass/pages/_about.scss */
 .about__info .animation-bar-90 {
   text-align: left;
   position: relative;
@@ -494,8 +550,8 @@
   background-size: 100%;
   background-image: linear-gradient(45deg, #ffffff 25%, rgba(0, 0, 0, 0) 25%, rgba(0, 0, 0, 0) 50%, #ffffff 50%, #ffffff 75%, rgba(0, 0, 0, 0) 75%, rgba(0, 0, 0, 0));
   background-size: 50px 50px;
-  -webkit-animation: progress-anim-80-after 1s infinite linear;
-          animation: progress-anim-80-after 1s infinite linear;
+  -webkit-animation: progress-anim-after 1s infinite linear;
+          animation: progress-anim-after 1s infinite linear;
   opacity: 0.1;
 }
 
@@ -517,7 +573,7 @@
   }
 }
 
-/* line 117, src/sass/pages/_about.scss */
+/* line 155, src/sass/pages/_about.scss */
 .about__info .animation-bar-90 span {
   -webkit-animation: progress-anim-90 4s linear;
           animation: progress-anim-90 4s linear;
@@ -542,7 +598,7 @@
   }
 }
 
-/* line 132, src/sass/pages/_about.scss */
+/* line 170, src/sass/pages/_about.scss */
 .about__info .animation-bar-80 {
   text-align: left;
   position: relative;
@@ -585,8 +641,8 @@
   background-size: 100%;
   background-image: linear-gradient(45deg, #ffffff 25%, rgba(0, 0, 0, 0) 25%, rgba(0, 0, 0, 0) 50%, #ffffff 50%, #ffffff 75%, rgba(0, 0, 0, 0) 75%, rgba(0, 0, 0, 0));
   background-size: 50px 50px;
-  -webkit-animation: progress-anim-80-after 1s infinite linear;
-          animation: progress-anim-80-after 1s infinite linear;
+  -webkit-animation: progress-anim-after 1s infinite linear;
+          animation: progress-anim-after 1s infinite linear;
   opacity: 0.1;
 }
 
@@ -599,7 +655,7 @@
   }
 }
 
-/* line 134, src/sass/pages/_about.scss */
+/* line 172, src/sass/pages/_about.scss */
 .about__info .animation-bar-80 span {
   -webkit-animation: progress-anim-80 4s linear;
           animation: progress-anim-80 4s linear;
@@ -624,7 +680,7 @@
   }
 }
 
-/* line 149, src/sass/pages/_about.scss */
+/* line 187, src/sass/pages/_about.scss */
 .about__info .animation-bar-70 {
   text-align: left;
   position: relative;
@@ -667,8 +723,8 @@
   background-size: 100%;
   background-image: linear-gradient(45deg, #ffffff 25%, rgba(0, 0, 0, 0) 25%, rgba(0, 0, 0, 0) 50%, #ffffff 50%, #ffffff 75%, rgba(0, 0, 0, 0) 75%, rgba(0, 0, 0, 0));
   background-size: 50px 50px;
-  -webkit-animation: progress-anim-80-after 1s infinite linear;
-          animation: progress-anim-80-after 1s infinite linear;
+  -webkit-animation: progress-anim-after 1s infinite linear;
+          animation: progress-anim-after 1s infinite linear;
   opacity: 0.1;
 }
 
@@ -681,7 +737,7 @@
   }
 }
 
-/* line 151, src/sass/pages/_about.scss */
+/* line 189, src/sass/pages/_about.scss */
 .about__info .animation-bar-70 span {
   -webkit-animation: progress-anim-70 4s linear;
           animation: progress-anim-70 4s linear;
@@ -706,7 +762,7 @@
   }
 }
 
-/* line 166, src/sass/pages/_about.scss */
+/* line 204, src/sass/pages/_about.scss */
 .about__info .animation-bar-40 {
   text-align: left;
   position: relative;
@@ -749,8 +805,8 @@
   background-size: 100%;
   background-image: linear-gradient(45deg, #ffffff 25%, rgba(0, 0, 0, 0) 25%, rgba(0, 0, 0, 0) 50%, #ffffff 50%, #ffffff 75%, rgba(0, 0, 0, 0) 75%, rgba(0, 0, 0, 0));
   background-size: 50px 50px;
-  -webkit-animation: progress-anim-80-after 1s infinite linear;
-          animation: progress-anim-80-after 1s infinite linear;
+  -webkit-animation: progress-anim-after 1s infinite linear;
+          animation: progress-anim-after 1s infinite linear;
   opacity: 0.1;
 }
 
@@ -763,7 +819,7 @@
   }
 }
 
-/* line 168, src/sass/pages/_about.scss */
+/* line 206, src/sass/pages/_about.scss */
 .about__info .animation-bar-40 span {
   -webkit-animation: progress-anim-40 4s linear;
           animation: progress-anim-40 4s linear;
@@ -1226,39 +1282,46 @@ body header {
 }
 
 /* line 46, src/sass/styles.scss */
+body .text-primary {
+  text-transform: uppercase;
+  color: #522222;
+  font-weight: bold;
+}
+
+/* line 52, src/sass/styles.scss */
 body .text-secondary {
   color: #ce9416;
 }
 
-/* line 50, src/sass/styles.scss */
+/* line 56, src/sass/styles.scss */
 body main {
   padding: 55px;
 }
 
-/* line 54, src/sass/styles.scss */
+/* line 60, src/sass/styles.scss */
 body main .icons a {
   padding: 8px;
   margin: 0 10px;
 }
 
-/* line 58, src/sass/styles.scss */
+/* line 64, src/sass/styles.scss */
 body main .icons a:hover {
   color: #ce9416;
   -webkit-transition: all 0.8s ease-out;
   transition: all 0.8s ease-out;
 }
 
-/* line 65, src/sass/styles.scss */
+/* line 71, src/sass/styles.scss */
 body main#home {
   overflow: hidden;
 }
 
-/* line 67, src/sass/styles.scss */
+/* line 73, src/sass/styles.scss */
 body main#home h1 {
   margin-top: 20%;
 }
 
-/* line 74, src/sass/styles.scss */
+/* line 80, src/sass/styles.scss */
 .btn, #work .btn-light, #work .btn-dark {
   display: block;
   padding: 8px 16px;
@@ -1275,7 +1338,7 @@ body main#home h1 {
   transition: all 0.8s ease-out;
 }
 
-/* line 78, src/sass/styles.scss */
+/* line 84, src/sass/styles.scss */
 .main-footer {
   margin-top: auto;
   text-align: center;
@@ -1285,7 +1348,7 @@ body main#home h1 {
   height: 60px;
 }
 
-/* line 86, src/sass/styles.scss */
+/* line 92, src/sass/styles.scss */
 .main-footer__copy {
   color: #ce9416;
 }
