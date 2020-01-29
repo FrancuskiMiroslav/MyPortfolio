@@ -300,7 +300,14 @@
   grid-area: 1 / 1 / 3 / 3;
 }
 
-/* line 13, src/sass/pages/_about.scss */
+@media (max-width: 375px) {
+  /* line 10, src/sass/pages/_about.scss */
+  .about__content .card {
+    display: none;
+  }
+}
+
+/* line 17, src/sass/pages/_about.scss */
 .about__content .card__content {
   text-align: center;
   position: relative;
@@ -313,41 +320,41 @@
           transform-style: preserve-3d;
 }
 
-/* line 21, src/sass/pages/_about.scss */
+/* line 25, src/sass/pages/_about.scss */
 .about__content .card__front, .about__content .card__back {
   position: absolute;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
-  padding: 2rem;
+  padding: 1rem;
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
   -webkit-transform-style: preserve-3d;
           transform-style: preserve-3d;
 }
 
-/* line 31, src/sass/pages/_about.scss */
+/* line 35, src/sass/pages/_about.scss */
 .about__content .card__front:before, .about__content .card__back:before {
   content: "";
   position: absolute;
-  top: 3vh;
-  bottom: 3vh;
-  left: 3vh;
-  right: 3vh;
+  top: 1.5vh;
+  bottom: 1.5vh;
+  left: 1.5vh;
+  right: 1.5vh;
   border: 3px solid currentColor;
   -webkit-transform: translateZ(6rem);
           transform: translateZ(6rem);
 }
 
-/* line 40, src/sass/pages/_about.scss */
+/* line 44, src/sass/pages/_about.scss */
 .about__content .card:hover .card__content {
   -webkit-transform: rotateY(0.5turn);
           transform: rotateY(0.5turn);
   cursor: pointer;
 }
 
-/* line 44, src/sass/pages/_about.scss */
+/* line 48, src/sass/pages/_about.scss */
 .about__content .card__title {
   -webkit-transform: translateZ(3rem);
           transform: translateZ(3rem);
@@ -357,7 +364,7 @@
   text-transform: uppercase;
 }
 
-/* line 50, src/sass/pages/_about.scss */
+/* line 54, src/sass/pages/_about.scss */
 .about__content .card__body {
   -webkit-transform: translateZ(6rem);
           transform: translateZ(6rem);
@@ -366,13 +373,13 @@
 }
 
 @media (max-width: 450px) {
-  /* line 50, src/sass/pages/_about.scss */
+  /* line 54, src/sass/pages/_about.scss */
   .about__content .card__body {
     line-height: 1;
   }
 }
 
-/* line 59, src/sass/pages/_about.scss */
+/* line 63, src/sass/pages/_about.scss */
 .about__content .card__subtitle {
   -webkit-transform: translateZ(9rem);
           transform: translateZ(9rem);
@@ -382,7 +389,7 @@
   opacity: 0.7;
 }
 
-/* line 67, src/sass/pages/_about.scss */
+/* line 71, src/sass/pages/_about.scss */
 .about__content .card__front {
   background-color: #642929;
   background-image: url(../images/FB_IMG_1576240369067.jpg);
@@ -392,7 +399,7 @@
   background-position: center;
 }
 
-/* line 75, src/sass/pages/_about.scss */
+/* line 79, src/sass/pages/_about.scss */
 .about__content .card__front .speech-bubble {
   position: relative;
   background: #763030;
@@ -418,13 +425,13 @@
 }
 
 @media (max-width: 1100px) {
-  /* line 75, src/sass/pages/_about.scss */
+  /* line 79, src/sass/pages/_about.scss */
   .about__content .card__front .speech-bubble {
     top: 25%;
   }
 }
 
-/* line 93, src/sass/pages/_about.scss */
+/* line 97, src/sass/pages/_about.scss */
 .about__content .card__front .speech-bubble:after {
   content: "";
   position: absolute;
@@ -439,14 +446,14 @@
 }
 
 @media (max-width: 400px) {
-  /* line 93, src/sass/pages/_about.scss */
+  /* line 97, src/sass/pages/_about.scss */
   .about__content .card__front .speech-bubble:after {
     margin-left: -39px;
     margin-bottom: -42px;
   }
 }
 
-/* line 112, src/sass/pages/_about.scss */
+/* line 116, src/sass/pages/_about.scss */
 .about__content .card__back {
   -webkit-transform: rotateY(0.5turn);
           transform: rotateY(0.5turn);
@@ -464,7 +471,7 @@
   cursor: default;
 }
 
-/* line 124, src/sass/pages/_about.scss */
+/* line 128, src/sass/pages/_about.scss */
 .about__info {
   grid-area: 1 / 3 / 3 / 6;
   display: grid;
@@ -472,7 +479,7 @@
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
 
-/* line 130, src/sass/pages/_about.scss */
+/* line 134, src/sass/pages/_about.scss */
 .about__info .skills {
   background: #763030;
   padding: 12px;
@@ -489,25 +496,25 @@
       justify-content: space-around;
 }
 
-/* line 138, src/sass/pages/_about.scss */
+/* line 142, src/sass/pages/_about.scss */
 .about__info .skills h3 {
   color: #ce9416;
   margin-bottom: 1rem;
   font-weight: bold;
 }
 
-/* line 144, src/sass/pages/_about.scss */
+/* line 148, src/sass/pages/_about.scss */
 .about__info .skills h6 {
   font-size: 1em;
   color: #e5a518;
 }
 
-/* line 148, src/sass/pages/_about.scss */
+/* line 152, src/sass/pages/_about.scss */
 .about__info .skills p {
   margin-bottom: 1rem;
 }
 
-/* line 153, src/sass/pages/_about.scss */
+/* line 157, src/sass/pages/_about.scss */
 .about__info .animation-bar-90 {
   text-align: left;
   position: relative;
@@ -573,7 +580,7 @@
   }
 }
 
-/* line 155, src/sass/pages/_about.scss */
+/* line 159, src/sass/pages/_about.scss */
 .about__info .animation-bar-90 span {
   -webkit-animation: progress-anim-90 4s linear;
           animation: progress-anim-90 4s linear;
@@ -598,7 +605,7 @@
   }
 }
 
-/* line 170, src/sass/pages/_about.scss */
+/* line 174, src/sass/pages/_about.scss */
 .about__info .animation-bar-80 {
   text-align: left;
   position: relative;
@@ -655,7 +662,7 @@
   }
 }
 
-/* line 172, src/sass/pages/_about.scss */
+/* line 176, src/sass/pages/_about.scss */
 .about__info .animation-bar-80 span {
   -webkit-animation: progress-anim-80 4s linear;
           animation: progress-anim-80 4s linear;
@@ -680,7 +687,7 @@
   }
 }
 
-/* line 187, src/sass/pages/_about.scss */
+/* line 191, src/sass/pages/_about.scss */
 .about__info .animation-bar-70 {
   text-align: left;
   position: relative;
@@ -737,7 +744,7 @@
   }
 }
 
-/* line 189, src/sass/pages/_about.scss */
+/* line 193, src/sass/pages/_about.scss */
 .about__info .animation-bar-70 span {
   -webkit-animation: progress-anim-70 4s linear;
           animation: progress-anim-70 4s linear;
@@ -762,7 +769,7 @@
   }
 }
 
-/* line 204, src/sass/pages/_about.scss */
+/* line 208, src/sass/pages/_about.scss */
 .about__info .animation-bar-40 {
   text-align: left;
   position: relative;
@@ -819,7 +826,7 @@
   }
 }
 
-/* line 206, src/sass/pages/_about.scss */
+/* line 210, src/sass/pages/_about.scss */
 .about__info .animation-bar-40 span {
   -webkit-animation: progress-anim-40 4s linear;
           animation: progress-anim-40 4s linear;
