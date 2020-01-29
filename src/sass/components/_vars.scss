@@ -21,7 +21,10 @@ $level-one: translateZ(3rem);
 $level-two: translateZ(6rem);
 $level-three: translateZ(9rem);
 
-$spacer: 1em;
-
 $fw-normal: 400;
 $fw-bold: 700;
+
+$min_width: 320px;
+$max_width: 1920px;
+$min_font: 14px;
+$max_font: 24px;

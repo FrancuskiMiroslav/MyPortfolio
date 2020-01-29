@@ -6,9 +6,10 @@
     ul {
       display: flex;
       justify-content: center;
+      width: 100%;
       li {
-        width: 100px;
         border: 1px solid rgba($color: $secondaryColor, $alpha: 1);
+        width: 100vw;
         cursor: pointer;
         transition: all 0.5s ease-in-out;
         &:hover {
