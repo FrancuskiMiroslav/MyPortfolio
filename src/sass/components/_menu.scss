@@ -86,6 +86,9 @@
 
   .nav-item {
     transform: translate3d(600px, 0, 0);
+    min-width: 200px;
+    display: flex;
+    justify-content: center;
     @include easeOut;
     &.show {
       transform: translate3d(0, 0, 0);
@@ -118,6 +121,8 @@
     padding: 8px 15px;
     margin: 8px;
     border: 2px solid $secondaryColor;
+    width: 100%;
+    text-align: center;
     @include easeOut;
 
     &:hover {
@@ -133,7 +138,7 @@
     .menu {
       .nav-item {
         &.show {
-          background: rgba($primaryColor, 0.98);
+          background: rgba($primaryColor, 0.9);
           margin: 5px;
         }
       }
@@ -186,7 +191,6 @@ body {
   main#home {
     @include media-max-width(870) {
       width: 100%;
-
       padding: 30px;
       @include easeOut;
 
