@@ -120,10 +120,11 @@
     font-weight: 300;
     padding: 8px 15px;
     margin: 8px;
-    border: 2px solid $secondaryColor;
+    @include hover-border;
     width: 100%;
     text-align: center;
     @include easeOut;
+    z-index: 50;
 
     &:hover {
       color: $primaryColor;
