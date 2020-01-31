@@ -1,0 +1,26 @@
+.success {
+  &__btn {
+    @include btn;
+    margin: 0;
+    border: 1px solid $primaryColor;
+    display: inline-block;
+    background: $secondaryColor;
+    color: $primaryColor;
+    font-weight: bold;
+    &:hover,
+    &:hover * {
+      background: $primaryColor;
+      color: $secondaryColor;
+      border: 1px solid currentColor;
+    }
+  }
+
+  &__paw,
+  &__back {
+    color: $primaryColor;
+    padding: 5px;
+    margin: 0 5px;
+    border-radius: 50%;
+    @include easeOut;
+  }
+}

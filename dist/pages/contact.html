@@ -81,7 +81,19 @@
           +38163*******
         </div>
       </div>
-      <form class="form" name="contact" method="POST" data-netlify="true">
+      <form
+        action="/pages/success"
+        class="form"
+        name="contact"
+        method="POST"
+        data-netlify="true"
+        netlify-honeypot="bot-field"
+      >
+        <p class="hidden">
+          <label>
+            Don’t fill this out if you're human: <input name="bot-field" />
+          </label>
+        </p>
         <div class="form_row">
           <select class="gender" name="role[]">
             <option value="mr">Mr</option>

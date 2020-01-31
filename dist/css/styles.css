@@ -1133,6 +1133,12 @@ body.contact {
 }
 
 /* line 69, src/sass/pages/_contact.scss */
+#contact .form .hidden {
+  visibility: hidden;
+  height: 0;
+}
+
+/* line 74, src/sass/pages/_contact.scss */
 #contact .form select,
 #contact .form textarea,
 #contact .form input {
@@ -1140,7 +1146,7 @@ body.contact {
   border: 1px solid #ce9416;
 }
 
-/* line 76, src/sass/pages/_contact.scss */
+/* line 81, src/sass/pages/_contact.scss */
 #contact .form_row {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1151,20 +1157,20 @@ body.contact {
 }
 
 @media (max-width: 500px) {
-  /* line 76, src/sass/pages/_contact.scss */
+  /* line 81, src/sass/pages/_contact.scss */
   #contact .form_row {
     display: block;
   }
 }
 
-/* line 83, src/sass/pages/_contact.scss */
+/* line 88, src/sass/pages/_contact.scss */
 #contact .form_row select {
   width: 21%;
   color: #7d3333;
   background-color: #ce9416;
 }
 
-/* line 87, src/sass/pages/_contact.scss */
+/* line 92, src/sass/pages/_contact.scss */
 #contact .form_row select:hover {
   background-color: #7d3333;
   color: #ce9416;
@@ -1174,25 +1180,25 @@ body.contact {
 }
 
 @media (max-width: 500px) {
-  /* line 83, src/sass/pages/_contact.scss */
+  /* line 88, src/sass/pages/_contact.scss */
   #contact .form_row select {
     width: auto;
   }
 }
 
-/* line 98, src/sass/pages/_contact.scss */
+/* line 103, src/sass/pages/_contact.scss */
 #contact .form_row input[type="text"] {
   width: 75%;
 }
 
 @media (max-width: 500px) {
-  /* line 98, src/sass/pages/_contact.scss */
+  /* line 103, src/sass/pages/_contact.scss */
   #contact .form_row input[type="text"] {
     width: 100%;
   }
 }
 
-/* line 106, src/sass/pages/_contact.scss */
+/* line 111, src/sass/pages/_contact.scss */
 #contact .form input[type="email"],
 #contact .form textarea {
   display: block;
@@ -1202,7 +1208,7 @@ body.contact {
 }
 
 @media (max-width: 500px) {
-  /* line 114, src/sass/pages/_contact.scss */
+  /* line 119, src/sass/pages/_contact.scss */
   #contact .form .netlify-recaptcha {
     -webkit-transform: scale(0.7);
             transform: scale(0.7);
@@ -1212,7 +1218,7 @@ body.contact {
 }
 
 @media (max-width: 400px) {
-  /* line 114, src/sass/pages/_contact.scss */
+  /* line 119, src/sass/pages/_contact.scss */
   #contact .form .netlify-recaptcha {
     -webkit-transform: scale(0.5);
             transform: scale(0.5);
@@ -1221,29 +1227,79 @@ body.contact {
   }
 }
 
-/* line 125, src/sass/pages/_contact.scss */
+/* line 130, src/sass/pages/_contact.scss */
 #contact .form .btn, #contact .form #work .btn-light, #work #contact .form .btn-light, #contact .form #work .btn-dark, #work #contact .form .btn-dark {
-  background-color: #ce9416;
-  border: none;
+  display: block;
+  padding: 8px 16px;
+  margin-bottom: 6px;
+  border-style: solid;
+  border-width: 0 1px;
+  cursor: pointer;
   border-radius: 0 0px 15px 15px;
-  color: #642929;
   width: 100%;
-  padding: 1em 2em;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
   margin: 2em auto 0 auto;
   font-weight: bold;
-  cursor: pointer;
+  padding: 1em 2em;
+  background: #ce9416;
+  color: #642929;
+  border-width: 0;
 }
 
-/* line 139, src/sass/pages/_contact.scss */
+/* line 177, src/sass/components/_mixins.scss */
 #contact .form .btn:hover, #contact .form #work .btn-light:hover, #work #contact .form .btn-light:hover, #contact .form #work .btn-dark:hover, #work #contact .form .btn-dark:hover {
-  background-color: #642929;
-  color: #ce9416;
-  -webkit-transition: 0.8s;
-  transition: 0.8s;
+  background: #ce9416;
+  color: #642929;
+  -webkit-transition: all 0.8s ease-out;
+  transition: all 0.8s ease-out;
+}
+
+/* line 141, src/sass/pages/_contact.scss */
+#contact .form .btn:hover, #contact .form #work .btn-light:hover, #work #contact .form .btn-light:hover, #contact .form #work .btn-dark:hover, #work #contact .form .btn-dark:hover {
   border: 1px solid #ce9416;
+  background: #642929;
+  color: #ce9416;
+}
+
+/* line 2, src/sass/pages/_success.scss */
+.success__btn {
+  display: block;
+  padding: 8px 16px;
+  margin-bottom: 6px;
+  border-style: solid;
+  border-width: 0 1px;
+  cursor: pointer;
+  margin: 0;
+  border: 1px solid #642929;
+  display: inline-block;
+  background: #ce9416;
+  color: #642929;
+  font-weight: bold;
+}
+
+/* line 177, src/sass/components/_mixins.scss */
+.success__btn:hover {
+  background: #ce9416;
+  color: #642929;
+  -webkit-transition: all 0.8s ease-out;
+  transition: all 0.8s ease-out;
+}
+
+/* line 10, src/sass/pages/_success.scss */
+.success__btn:hover,
+.success__btn:hover * {
+  background: #642929;
+  color: #ce9416;
+  border: 1px solid currentColor;
+}
+
+/* line 18, src/sass/pages/_success.scss */
+.success__paw, .success__back {
+  color: #642929;
+  padding: 5px;
+  margin: 0 5px;
+  border-radius: 50%;
+  -webkit-transition: all 0.8s ease-out;
+  transition: all 0.8s ease-out;
 }
 
 /* line 1, src/sass/pages/_print.scss */
@@ -1301,7 +1357,7 @@ a {
   color: #ffffff;
 }
 
-/* line 12, src/sass/styles.scss */
+/* line 13, src/sass/styles.scss */
 body {
   background: #642929;
   color: #fff;
@@ -1336,21 +1392,21 @@ body#bg-img:before {
   z-index: -100;
 }
 
-/* line 22, src/sass/styles.scss */
+/* line 23, src/sass/styles.scss */
 body h1,
 body h2,
 body h3 {
   font-weight: 400;
 }
 
-/* line 27, src/sass/styles.scss */
+/* line 28, src/sass/styles.scss */
 body h1.lg-heading,
 body h2.lg-heading,
 body h3.lg-heading {
   font-size: 60px;
 }
 
-/* line 31, src/sass/styles.scss */
+/* line 32, src/sass/styles.scss */
 body h1.sm-heading,
 body h2.sm-heading,
 body h3.sm-heading {
@@ -1359,65 +1415,66 @@ body h3.sm-heading {
   background: rgba(107, 44, 44, 0.5);
 }
 
-/* line 37, src/sass/styles.scss */
+/* line 38, src/sass/styles.scss */
 body a {
   color: #fff;
 }
 
-/* line 40, src/sass/styles.scss */
+/* line 41, src/sass/styles.scss */
 body header {
   position: fixed;
   z-index: 2;
   width: 100%;
 }
 
-/* line 46, src/sass/styles.scss */
+/* line 47, src/sass/styles.scss */
 body .text-primary {
   text-transform: uppercase;
   color: #522222;
   font-weight: bold;
 }
 
-/* line 52, src/sass/styles.scss */
+/* line 53, src/sass/styles.scss */
 body .text-secondary {
   color: #ce9416;
 }
 
-/* line 56, src/sass/styles.scss */
+/* line 57, src/sass/styles.scss */
 body main {
   padding: 40px;
 }
 
-/* line 60, src/sass/styles.scss */
+/* line 61, src/sass/styles.scss */
 body main .icons a {
   padding: 8px;
   margin: 0 10px;
 }
 
-/* line 64, src/sass/styles.scss */
+/* line 65, src/sass/styles.scss */
 body main .icons a:hover {
   color: #ce9416;
   -webkit-transition: all 0.8s ease-out;
   transition: all 0.8s ease-out;
 }
 
-/* line 71, src/sass/styles.scss */
+/* line 72, src/sass/styles.scss */
 body main#home {
   overflow: hidden;
 }
 
-/* line 73, src/sass/styles.scss */
+/* line 74, src/sass/styles.scss */
 body main#home h1 {
   margin-top: 20%;
 }
 
-/* line 80, src/sass/styles.scss */
+/* line 81, src/sass/styles.scss */
 .btn, #work .btn-light, #work .btn-dark {
   display: block;
   padding: 8px 16px;
   margin-bottom: 6px;
   border-style: solid;
   border-width: 0 1px;
+  cursor: pointer;
 }
 
 /* line 177, src/sass/components/_mixins.scss */
@@ -1428,7 +1485,7 @@ body main#home h1 {
   transition: all 0.8s ease-out;
 }
 
-/* line 84, src/sass/styles.scss */
+/* line 85, src/sass/styles.scss */
 .main-footer {
   margin-top: auto;
   text-align: center;
@@ -1438,7 +1495,7 @@ body main#home h1 {
   height: 60px;
 }
 
-/* line 92, src/sass/styles.scss */
+/* line 93, src/sass/styles.scss */
 .main-footer__copy {
   color: #ce9416;
 }
