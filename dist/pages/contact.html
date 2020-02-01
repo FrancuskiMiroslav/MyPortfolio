@@ -99,30 +99,31 @@
               <option value="ms">Ms</option>
               <option value="mrs">Mrs</option>
             </select>
-            <input type="text" id="name" name="name" placeholder="Full name" />
+            <input
+              type="text"
+              class="form__input"
+              id="name"
+              name="name"
+              placeholder="Full name"
+            />
           </div>
           <div class="form__row">
-            <div class="form__column">
-              <input
-                type="email"
-                name="email"
-                id="email"
-                placeholder="E-mail"
-              />
-              <div
-                class="netlify-recaptcha"
-                data-netlify-recaptcha="true"
-              ></div>
-            </div>
-            <div class="form__column">
-              <textarea
-                name="message"
-                id="message"
-                placeholder="Your message"
-              ></textarea>
-            </div>
+            <input
+              type="email"
+              class="form__input"
+              name="email"
+              id="email"
+              placeholder="E-mail"
+            />
           </div>
-
+          <textarea
+            class="form__input"
+            name="message"
+            id="message"
+            rows="3"
+            placeholder="Your message"
+          ></textarea>
+          <div class="netlify-recaptcha" data-netlify-recaptcha="true"></div>
           <button type="submit" class="btn">Send</button>
         </form>
       </div>

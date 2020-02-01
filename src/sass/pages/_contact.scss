@@ -62,7 +62,7 @@
     );
     height: 100%;
     width: 100%;
-    padding: 28px;
+    padding: 18px;
     margin: 0 auto;
 
     @include media-max-width(1100) {
@@ -78,17 +78,16 @@
     select,
     textarea,
     input {
-      padding: 10px;
+      padding: 8px;
       border: 1px solid $secondaryColor;
-    }
-
-    &__column {
-      width: 48%;
+      color: #ffffff;
+      background-color: transparent;
     }
 
     &__row {
       display: flex;
       justify-content: space-between;
+      margin-bottom: 18px;
       @include media-max-width(500) {
         display: block;
       }
@@ -119,9 +118,18 @@
     input[type="email"],
     textarea {
       display: block;
-      margin-top: 15px;
-      margin-bottom: 15px;
       width: 100%;
+      font-family: $main_font;
+    }
+
+    &__input {
+      &::placeholder {
+        color: #ffffff;
+      }
+
+      &:focus {
+        background: rgba(lighten($color: $secondaryColor, $amount: 7), 0.8);
+      }
     }
 
     .netlify-recaptcha {
@@ -141,7 +149,7 @@
       width: 100%;
       margin: 0 auto;
       font-weight: bold;
-      padding: 1em 2em;
+      padding: 0.5em 1em;
       background: $secondaryColor;
       color: $primaryColor;
       border-width: 0;
