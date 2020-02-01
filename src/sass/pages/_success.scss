@@ -1,3 +1,7 @@
+#bg-img {
+  @include background($home-image);
+}
+
 .success {
   &__btn {
     @include btn;

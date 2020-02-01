@@ -1327,7 +1327,27 @@
   color: #ce9416;
 }
 
-/* line 2, src/sass/pages/_success.scss */
+/* line 1, src/sass/pages/_success.scss */
+#bg-img {
+  background: url(../images/home-bg-min.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+}
+
+/* line 71, src/sass/components/_mixins.scss */
+#bg-img:before {
+  content: "";
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(100, 41, 41, 0.85);
+  z-index: -100;
+}
+
+/* line 6, src/sass/pages/_success.scss */
 .success__btn {
   display: block;
   padding: 8px 16px;
@@ -1351,7 +1371,7 @@
   transition: all 0.8s ease-out;
 }
 
-/* line 10, src/sass/pages/_success.scss */
+/* line 14, src/sass/pages/_success.scss */
 .success__btn:hover,
 .success__btn:hover * {
   background: #642929;
@@ -1359,7 +1379,7 @@
   border: 1px solid currentColor;
 }
 
-/* line 18, src/sass/pages/_success.scss */
+/* line 22, src/sass/pages/_success.scss */
 .success__paw, .success__back {
   color: #642929;
   padding: 5px;
