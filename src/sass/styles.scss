@@ -10,8 +10,12 @@
 
 @include main;
 
+#home-img {
+  @include background($home-image);
+  background-position: top;
+}
+
 body {
-  @include background;
   background: $primaryColor;
   color: setTextColor($primaryColor);
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;

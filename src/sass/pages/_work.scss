@@ -1,3 +1,7 @@
+#work-img {
+  @include background($wall);
+}
+
 #work {
   .portfolio-menu {
     text-align: center;
