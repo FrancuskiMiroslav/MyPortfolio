@@ -16,6 +16,10 @@
       rgba(darken($color: $primaryColor, $amount: 7), 0.9) 0%,
       rgba(lighten($color: $primaryColor, $amount: 7), 0.9) 100%
     );
+    @include media-max-width(800) {
+      width: 80%;
+    }
+
     @include media-max-width(600) {
       width: 100%;
     }
@@ -78,7 +82,11 @@
       border: 1px solid $secondaryColor;
     }
 
-    &_row {
+    &__column {
+      width: 48%;
+    }
+
+    &__row {
       display: flex;
       justify-content: space-between;
       @include media-max-width(500) {
@@ -111,9 +119,9 @@
     input[type="email"],
     textarea {
       display: block;
+      margin-top: 15px;
+      margin-bottom: 15px;
       width: 100%;
-      margin-top: 28px;
-      margin-bottom: 28px;
     }
 
     .netlify-recaptcha {
@@ -131,7 +139,7 @@
       @include btn;
       border-radius: 0 0px 15px 15px;
       width: 100%;
-      margin: 2em auto 0 auto;
+      margin: 0 auto;
       font-weight: bold;
       padding: 1em 2em;
       background: $secondaryColor;

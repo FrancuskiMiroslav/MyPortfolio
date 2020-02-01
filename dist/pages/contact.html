@@ -93,7 +93,7 @@
               Don’t fill this out if you're human: <input name="bot-field" />
             </label>
           </p>
-          <div class="form_row">
+          <div class="form__row">
             <select class="gender" name="role[]">
               <option value="mr">Mr</option>
               <option value="ms">Ms</option>
@@ -101,14 +101,28 @@
             </select>
             <input type="text" id="name" name="name" placeholder="Full name" />
           </div>
-          <input type="email" name="email" id="email" placeholder="E-mail" />
-          <textarea
-            name="message"
-            id="message"
-            rows="2"
-            placeholder="Your message"
-          ></textarea>
-          <div class="netlify-recaptcha" data-netlify-recaptcha="true"></div>
+          <div class="form__row">
+            <div class="form__column">
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="E-mail"
+              />
+              <div
+                class="netlify-recaptcha"
+                data-netlify-recaptcha="true"
+              ></div>
+            </div>
+            <div class="form__column">
+              <textarea
+                name="message"
+                id="message"
+                placeholder="Your message"
+              ></textarea>
+            </div>
+          </div>
+
           <button type="submit" class="btn">Send</button>
         </form>
       </div>

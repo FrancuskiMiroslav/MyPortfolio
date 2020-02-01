@@ -1125,6 +1125,13 @@
   background: linear-gradient(180deg, rgba(75, 31, 31, 0.9) 0%, rgba(125, 51, 51, 0.9) 100%);
 }
 
+@media (max-width: 800px) {
+  /* line 6, src/sass/pages/_contact.scss */
+  #contact .boxes {
+    width: 80%;
+  }
+}
+
 @media (max-width: 600px) {
   /* line 6, src/sass/pages/_contact.scss */
   #contact .boxes {
@@ -1132,7 +1139,7 @@
   }
 }
 
-/* line 23, src/sass/pages/_contact.scss */
+/* line 27, src/sass/pages/_contact.scss */
 #contact .boxes .box {
   width: 50%;
   border: 3px solid #ce9416;
@@ -1157,31 +1164,31 @@
 }
 
 @media (max-width: 1000px) {
-  /* line 23, src/sass/pages/_contact.scss */
+  /* line 27, src/sass/pages/_contact.scss */
   #contact .boxes .box {
     width: 100%;
   }
 }
 
-/* line 38, src/sass/pages/_contact.scss */
+/* line 42, src/sass/pages/_contact.scss */
 #contact .boxes .box i {
   display: block;
   margin-bottom: 20px;
 }
 
-/* line 42, src/sass/pages/_contact.scss */
+/* line 46, src/sass/pages/_contact.scss */
 #contact .boxes .box:hover {
   background: #ce9416;
   color: #642929;
   cursor: crosshair;
 }
 
-/* line 46, src/sass/pages/_contact.scss */
+/* line 50, src/sass/pages/_contact.scss */
 #contact .boxes .box:hover span {
   color: #fff;
 }
 
-/* line 53, src/sass/pages/_contact.scss */
+/* line 57, src/sass/pages/_contact.scss */
 #contact .form {
   background: -webkit-gradient(linear, left bottom, left top, from(rgba(75, 31, 31, 0.9)), to(rgba(125, 51, 51, 0.9)));
   background: linear-gradient(0deg, rgba(75, 31, 31, 0.9) 0%, rgba(125, 51, 51, 0.9) 100%);
@@ -1192,20 +1199,20 @@
 }
 
 @media (max-width: 1100px) {
-  /* line 53, src/sass/pages/_contact.scss */
+  /* line 57, src/sass/pages/_contact.scss */
   #contact .form {
     margin-top: 20px;
     width: 100%;
   }
 }
 
-/* line 69, src/sass/pages/_contact.scss */
+/* line 73, src/sass/pages/_contact.scss */
 #contact .form .hidden {
   visibility: hidden;
   height: 0;
 }
 
-/* line 74, src/sass/pages/_contact.scss */
+/* line 78, src/sass/pages/_contact.scss */
 #contact .form select,
 #contact .form textarea,
 #contact .form input {
@@ -1213,8 +1220,13 @@
   border: 1px solid #ce9416;
 }
 
-/* line 81, src/sass/pages/_contact.scss */
-#contact .form_row {
+/* line 85, src/sass/pages/_contact.scss */
+#contact .form__column {
+  width: 48%;
+}
+
+/* line 89, src/sass/pages/_contact.scss */
+#contact .form__row {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1224,21 +1236,21 @@
 }
 
 @media (max-width: 500px) {
-  /* line 81, src/sass/pages/_contact.scss */
-  #contact .form_row {
+  /* line 89, src/sass/pages/_contact.scss */
+  #contact .form__row {
     display: block;
   }
 }
 
-/* line 88, src/sass/pages/_contact.scss */
-#contact .form_row select {
+/* line 96, src/sass/pages/_contact.scss */
+#contact .form__row select {
   width: 21%;
   color: #7d3333;
   background-color: #ce9416;
 }
 
-/* line 92, src/sass/pages/_contact.scss */
-#contact .form_row select:hover {
+/* line 100, src/sass/pages/_contact.scss */
+#contact .form__row select:hover {
   background-color: #7d3333;
   color: #ce9416;
   -webkit-transition: 0.8s;
@@ -1247,35 +1259,35 @@
 }
 
 @media (max-width: 500px) {
-  /* line 88, src/sass/pages/_contact.scss */
-  #contact .form_row select {
+  /* line 96, src/sass/pages/_contact.scss */
+  #contact .form__row select {
     width: auto;
   }
 }
 
-/* line 103, src/sass/pages/_contact.scss */
-#contact .form_row input[type="text"] {
+/* line 111, src/sass/pages/_contact.scss */
+#contact .form__row input[type="text"] {
   width: 75%;
 }
 
 @media (max-width: 500px) {
-  /* line 103, src/sass/pages/_contact.scss */
-  #contact .form_row input[type="text"] {
+  /* line 111, src/sass/pages/_contact.scss */
+  #contact .form__row input[type="text"] {
     width: 100%;
   }
 }
 
-/* line 111, src/sass/pages/_contact.scss */
+/* line 119, src/sass/pages/_contact.scss */
 #contact .form input[type="email"],
 #contact .form textarea {
   display: block;
+  margin-top: 15px;
+  margin-bottom: 15px;
   width: 100%;
-  margin-top: 28px;
-  margin-bottom: 28px;
 }
 
 @media (max-width: 500px) {
-  /* line 119, src/sass/pages/_contact.scss */
+  /* line 127, src/sass/pages/_contact.scss */
   #contact .form .netlify-recaptcha {
     -webkit-transform: scale(0.7);
             transform: scale(0.7);
@@ -1285,7 +1297,7 @@
 }
 
 @media (max-width: 400px) {
-  /* line 119, src/sass/pages/_contact.scss */
+  /* line 127, src/sass/pages/_contact.scss */
   #contact .form .netlify-recaptcha {
     -webkit-transform: scale(0.5);
             transform: scale(0.5);
@@ -1294,7 +1306,7 @@
   }
 }
 
-/* line 130, src/sass/pages/_contact.scss */
+/* line 138, src/sass/pages/_contact.scss */
 #contact .form .btn, #contact .form #work .btn-light, #work #contact .form .btn-light, #contact .form #work .btn-dark, #work #contact .form .btn-dark {
   display: block;
   padding: 8px 16px;
@@ -1304,7 +1316,7 @@
   cursor: pointer;
   border-radius: 0 0px 15px 15px;
   width: 100%;
-  margin: 2em auto 0 auto;
+  margin: 0 auto;
   font-weight: bold;
   padding: 1em 2em;
   background: #ce9416;
@@ -1320,7 +1332,7 @@
   transition: all 0.8s ease-out;
 }
 
-/* line 141, src/sass/pages/_contact.scss */
+/* line 149, src/sass/pages/_contact.scss */
 #contact .form .btn:hover, #contact .form #work .btn-light:hover, #work #contact .form .btn-light:hover, #contact .form #work .btn-dark:hover, #work #contact .form .btn-dark:hover {
   border: 1px solid #ce9416;
   background: #642929;
