@@ -62,6 +62,14 @@
       object-fit: cover;
       object-position: top;
     }
+
+    &__flex {
+      display: flex;
+      text-align: center;
+      & a {
+        width: 50%;
+      }
+    }
   }
 
   .btn-light {
