@@ -201,13 +201,13 @@
   font-weight: 300;
   padding: 8px 15px;
   margin: 8px;
-  cursor: pointer;
-  position: relative;
   width: 100%;
   text-align: center;
+  z-index: 50;
   -webkit-transition: all 0.8s ease-out;
   transition: all 0.8s ease-out;
-  z-index: 50;
+  cursor: pointer;
+  position: relative;
 }
 
 /* line 94, src/sass/components/_mixins.scss */
@@ -236,11 +236,9 @@
   width: 100%;
   height: 100%;
   border: 5px solid #ce9416;
-  -webkit-transition: height 0.5s linear, width 0.5s linear 0.5s;
-  transition: height 0.5s linear, width 0.5s linear 0.5s;
 }
 
-/* line 121, src/sass/components/_mixins.scss */
+/* line 120, src/sass/components/_mixins.scss */
 .menu .nav-link:hover:before {
   border-right: none;
   border-bottom: none;
@@ -248,18 +246,17 @@
   transition: height 0.5s linear, width 0.5s linear 0.5s;
 }
 
-/* line 127, src/sass/components/_mixins.scss */
+/* line 126, src/sass/components/_mixins.scss */
 .menu .nav-link:hover:after {
   border-left: none;
   border-top: none;
-  -webkit-transition: height 0.5s linear 1s, width 1s linear 1.5s;
-  transition: height 0.5s linear 1s, width 1s linear 1.5s;
+  -webkit-transition: height 0.5s linear 1s, width 0.5s linear 1.5s;
+  transition: height 0.5s linear 1s, width 0.5s linear 1.5s;
 }
 
-/* line 129, src/sass/components/_menu.scss */
+/* line 130, src/sass/components/_menu.scss */
 .menu .nav-link:hover {
-  color: #642929;
-  background-color: #ce9416;
+  color: #ce9416;
   border-color: #642929;
 }
 
@@ -605,7 +602,7 @@
           box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.25), 0 1px rgba(255, 255, 255, 0.08);
 }
 
-/* line 216, src/sass/components/_mixins.scss */
+/* line 215, src/sass/components/_mixins.scss */
 .about__info .animation-bar-90 span {
   text-align: right;
   color: #642929;
@@ -622,7 +619,7 @@
   background-image: linear-gradient(to right, #642929, #ce9416);
 }
 
-/* line 230, src/sass/components/_mixins.scss */
+/* line 229, src/sass/components/_mixins.scss */
 .about__info .animation-bar-90 span:after {
   position: absolute;
   top: 0;
@@ -696,7 +693,7 @@
           box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.25), 0 1px rgba(255, 255, 255, 0.08);
 }
 
-/* line 216, src/sass/components/_mixins.scss */
+/* line 215, src/sass/components/_mixins.scss */
 .about__info .animation-bar-80 span {
   text-align: right;
   color: #642929;
@@ -713,7 +710,7 @@
   background-image: linear-gradient(to right, #642929, #ce9416);
 }
 
-/* line 230, src/sass/components/_mixins.scss */
+/* line 229, src/sass/components/_mixins.scss */
 .about__info .animation-bar-80 span:after {
   position: absolute;
   top: 0;
@@ -778,7 +775,7 @@
           box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.25), 0 1px rgba(255, 255, 255, 0.08);
 }
 
-/* line 216, src/sass/components/_mixins.scss */
+/* line 215, src/sass/components/_mixins.scss */
 .about__info .animation-bar-70 span {
   text-align: right;
   color: #642929;
@@ -795,7 +792,7 @@
   background-image: linear-gradient(to right, #642929, #ce9416);
 }
 
-/* line 230, src/sass/components/_mixins.scss */
+/* line 229, src/sass/components/_mixins.scss */
 .about__info .animation-bar-70 span:after {
   position: absolute;
   top: 0;
@@ -860,7 +857,7 @@
           box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.25), 0 1px rgba(255, 255, 255, 0.08);
 }
 
-/* line 216, src/sass/components/_mixins.scss */
+/* line 215, src/sass/components/_mixins.scss */
 .about__info .animation-bar-40 span {
   text-align: right;
   color: #642929;
@@ -877,7 +874,7 @@
   background-image: linear-gradient(to right, #642929, #ce9416);
 }
 
-/* line 230, src/sass/components/_mixins.scss */
+/* line 229, src/sass/components/_mixins.scss */
 .about__info .animation-bar-40 span:after {
   position: absolute;
   top: 0;
@@ -1052,11 +1049,9 @@
   width: 100%;
   height: 100%;
   border: 5px solid #ce9416;
-  -webkit-transition: height 0.5s linear, width 0.5s linear 0.5s;
-  transition: height 0.5s linear, width 0.5s linear 0.5s;
 }
 
-/* line 121, src/sass/components/_mixins.scss */
+/* line 120, src/sass/components/_mixins.scss */
 #work .projects__hover:hover:before {
   border-right: none;
   border-bottom: none;
@@ -1064,12 +1059,12 @@
   transition: height 0.5s linear, width 0.5s linear 0.5s;
 }
 
-/* line 127, src/sass/components/_mixins.scss */
+/* line 126, src/sass/components/_mixins.scss */
 #work .projects__hover:hover:after {
   border-left: none;
   border-top: none;
-  -webkit-transition: height 0.5s linear 1s, width 1s linear 1.5s;
-  transition: height 0.5s linear 1s, width 1s linear 1.5s;
+  -webkit-transition: height 0.5s linear 1s, width 0.5s linear 1.5s;
+  transition: height 0.5s linear 1s, width 0.5s linear 1.5s;
 }
 
 /* line 58, src/sass/pages/_work.scss */
@@ -1366,7 +1361,7 @@
   border-width: 0;
 }
 
-/* line 184, src/sass/components/_mixins.scss */
+/* line 183, src/sass/components/_mixins.scss */
 #contact .form .btn:hover, #contact .form #work .btn-light:hover, #work #contact .form .btn-light:hover, #contact .form #work .btn-dark:hover, #work #contact .form .btn-dark:hover {
   background: #ce9416;
   color: #642929;
@@ -1417,7 +1412,7 @@
   font-weight: bold;
 }
 
-/* line 184, src/sass/components/_mixins.scss */
+/* line 183, src/sass/components/_mixins.scss */
 .success__btn:hover {
   background: #ce9416;
   color: #642929;
@@ -1620,7 +1615,7 @@ body main#home h1 {
   cursor: pointer;
 }
 
-/* line 184, src/sass/components/_mixins.scss */
+/* line 183, src/sass/components/_mixins.scss */
 .btn:hover, #work .btn-light:hover, #work .btn-dark:hover {
   background: #ce9416;
   color: #642929;
