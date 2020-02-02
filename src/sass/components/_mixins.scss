@@ -89,7 +89,6 @@
 }
 
 @mixin hover-border {
-  cursor: pointer;
   position: relative;
   &:after,
   &:before {
