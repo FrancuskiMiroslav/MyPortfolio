@@ -67,15 +67,38 @@
         Check out my new projects...
       </h2>
       <aside class="portfolio-menu">
-        <ul>
-          <li class="active" data-filter="*">All</li>
-          <li data-filter=".scss">Sass</li>
-          <li data-filter=".js">JavaScript</li>
-          <li data-filter=".wp">WordPress</li>
-        </ul>
+        <div class="portfolio-menu__ui-group">
+          <h3>
+            Front-end tech
+          </h3>
+          <select
+            class="portfolio-menu__ui-group--filter-select"
+            value-group="tech"
+          >
+            <option value="">any</option>
+            <option value=".scss">Sass</option>
+            <option value=".js">JavaScript</option>
+            <option value=".wp">WordPress</option>
+          </select>
+        </div>
+        <div class="portfolio-menu__ui-group">
+          <h3>
+            Year
+          </h3>
+          <select
+            class="portfolio-menu__ui-group--filter-select"
+            value-group="year"
+          >
+            <option value="">any</option>
+            <option value=".2020">2020</option>
+            <option value=".2019">2019</option>
+            <option value=".2018">2018</option>
+            <option value=".2017">2017</option>
+          </select>
+        </div>
       </aside>
       <section class="projects">
-        <div class="item scss js">
+        <div class="item scss js 2020">
           <div class="projects__hover">
             <input type="checkbox" id="zoom12" />
             <label for="zoom12">
@@ -115,7 +138,7 @@
             </div>
           </div>
         </div>
-        <div class="item scss js">
+        <div class="item scss js 2020">
           <div class="projects__hover">
             <input type="checkbox" id="zoom11" />
             <label for="zoom11">
@@ -155,7 +178,7 @@
             </div>
           </div>
         </div>
-        <div class="item js">
+        <div class="item js 2019">
           <div class="projects__hover">
             <input type="checkbox" id="zoom10" />
             <label for="zoom10">
@@ -195,7 +218,7 @@
             </div>
           </div>
         </div>
-        <div class="item wp">
+        <div class="item wp 2019">
           <div class="projects__hover">
             <input type="checkbox" id="zoom9" />
             <label for="zoom9">
@@ -225,7 +248,7 @@
             </a>
           </div>
         </div>
-        <div class="item scss">
+        <div class="item scss 2019">
           <div class="projects__hover">
             <input type="checkbox" id="zoom8" />
             <label for="zoom8">
@@ -263,7 +286,7 @@
             </a>
           </div>
         </div>
-        <div class="item scss">
+        <div class="item scss 2019">
           <div class="projects__hover">
             <input type="checkbox" id="zoom7" />
             <label for="zoom7">
@@ -301,7 +324,7 @@
             </a>
           </div>
         </div>
-        <div class="item wp">
+        <div class="item wp 2019">
           <div class="projects__hover">
             <input type="checkbox" id="zoom6" />
             <label for="zoom6">
@@ -329,7 +352,7 @@
             Website
           </a>
         </div>
-        <div class="item">
+        <div class="item 2018">
           <div class="projects__hover">
             <input type="checkbox" id="zoom5" />
             <label for="zoom5">
@@ -367,7 +390,7 @@
             </a>
           </div>
         </div>
-        <div class="item js">
+        <div class="item js 2018">
           <div class="projects__hover">
             <input type="checkbox" id="zoom4" />
             <label for="zoom4">
@@ -406,7 +429,7 @@
           </div>
         </div>
 
-        <div class="item wp">
+        <div class="item wp 2018">
           <div class="projects__hover">
             <input type="checkbox" id="zoom3" />
             <label for="zoom3">
@@ -430,7 +453,7 @@
             Website
           </a>
         </div>
-        <div class="item js">
+        <div class="item js 2018">
           <div class="projects__hover">
             <input type="checkbox" id="zoom2" />
             <label for="zoom2">
@@ -468,7 +491,7 @@
             </a>
           </div>
         </div>
-        <div class="item">
+        <div class="item 2017">
           <div class="projects__hover">
             <input type="checkbox" id="zoom1" />
             <label for="zoom1">
@@ -514,8 +537,9 @@
       <span class="main-footer__copy">Francuski Miroslav</span> 2019.
     </footer>
     <script type="text/javascript" src="../js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="../js/all.min.js"></script>
     <script type="text/javascript" src="../js/lightbox.min.js"></script>
     <script type="text/javascript" src="../js/isotope-docs.min.js"></script>
-    <script src="../js/main.js"></script>
+    <script type="text/javascript" src="../js/main.min.js"></script>
   </body>
 </html>

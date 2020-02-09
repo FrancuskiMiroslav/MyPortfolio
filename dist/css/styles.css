@@ -947,50 +947,71 @@
 #work .portfolio-menu {
   text-align: center;
   margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
 }
 
-/* line 10, src/sass/pages/_work.scss */
-#work .portfolio-menu ul {
+/* line 12, src/sass/pages/_work.scss */
+#work .portfolio-menu__ui-group {
+  width: 50%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 100%;
+  border: 1px solid #ce9416;
 }
 
-/* line 14, src/sass/pages/_work.scss */
-#work .portfolio-menu ul li {
-  border: 1px solid #ce9416;
-  width: 100vw;
+@media (max-width: 700px) {
+  /* line 12, src/sass/pages/_work.scss */
+  #work .portfolio-menu__ui-group {
+    width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+/* line 22, src/sass/pages/_work.scss */
+#work .portfolio-menu__ui-group--filter-select {
+  background-color: rgba(125, 51, 51, 0.3);
+  color: white;
+  padding: 5px;
+  border: none;
+  font-size: 20px;
+  -webkit-box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  border-left: 1px solid #ce9416;
+  border-right: 1px solid #ce9416;
+  margin-left: 10px;
   cursor: pointer;
+}
+
+@media (max-width: 700px) {
+  /* line 22, src/sass/pages/_work.scss */
+  #work .portfolio-menu__ui-group--filter-select {
+    margin: 0;
+    border: none;
+    border-top: 1px solid #ce9416;
+  }
+}
+
+/* line 39, src/sass/pages/_work.scss */
+#work .portfolio-menu__ui-group--filter-select:hover, #work .portfolio-menu__ui-group--filter-select:focus,
+#work .portfolio-menu__ui-group--filter-select * {
+  color: #642929;
+  background: #ce9416;
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
-}
-
-/* line 19, src/sass/pages/_work.scss */
-#work .portfolio-menu ul li:hover {
-  background-color: #ce9416;
-  color: #7d3333;
-  -webkit-transition: 0.8s;
-  transition: 0.8s;
   cursor: pointer;
 }
 
-/* line 26, src/sass/pages/_work.scss */
-#work .portfolio-menu ul li.active {
-  background: #ce9416;
-}
-
-/* line 28, src/sass/pages/_work.scss */
-#work .portfolio-menu ul li.active:hover {
-  color: #642929;
-  -webkit-transition: 0.8s;
-  transition: 0.8s;
-}
-
-/* line 37, src/sass/pages/_work.scss */
+/* line 51, src/sass/pages/_work.scss */
 #work .projects {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -999,7 +1020,7 @@
       flex-wrap: wrap;
 }
 
-/* line 41, src/sass/pages/_work.scss */
+/* line 55, src/sass/pages/_work.scss */
 #work .projects .item {
   width: 376px;
   text-align: center;
@@ -1007,25 +1028,25 @@
 }
 
 @media (max-width: 870px) {
-  /* line 41, src/sass/pages/_work.scss */
+  /* line 55, src/sass/pages/_work.scss */
   #work .projects .item {
     width: 100%;
   }
 }
 
-/* line 51, src/sass/pages/_work.scss */
+/* line 65, src/sass/pages/_work.scss */
 #work .projects__hover {
   overflow: hidden;
   margin-bottom: 6px;
   height: 500px;
 }
 
-/* line 55, src/sass/pages/_work.scss */
+/* line 69, src/sass/pages/_work.scss */
 #work .projects__hover input[type="checkbox"] {
   display: none;
 }
 
-/* line 57, src/sass/pages/_work.scss */
+/* line 71, src/sass/pages/_work.scss */
 #work .projects__hover input[type="checkbox"]:checked ~ label > img {
   -webkit-transform: scale(1.5);
           transform: scale(1.5);
@@ -1033,7 +1054,7 @@
   cursor: zoom-out;
 }
 
-/* line 63, src/sass/pages/_work.scss */
+/* line 77, src/sass/pages/_work.scss */
 #work .projects__hover img {
   -webkit-transition: -webkit-transform 0.5s ease;
   transition: -webkit-transform 0.5s ease;
@@ -1050,7 +1071,7 @@
      object-position: top;
 }
 
-/* line 74, src/sass/pages/_work.scss */
+/* line 88, src/sass/pages/_work.scss */
 #work .projects__flex {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1058,18 +1079,18 @@
   text-align: center;
 }
 
-/* line 77, src/sass/pages/_work.scss */
+/* line 91, src/sass/pages/_work.scss */
 #work .projects__flex a {
   width: 50%;
 }
 
-/* line 83, src/sass/pages/_work.scss */
+/* line 97, src/sass/pages/_work.scss */
 #work .btn-light {
   background: #7d3333;
   border-color: #4b1f1f;
 }
 
-/* line 89, src/sass/pages/_work.scss */
+/* line 103, src/sass/pages/_work.scss */
 #work .btn-dark {
   background: #4b1f1f;
   border-color: #7d3333;

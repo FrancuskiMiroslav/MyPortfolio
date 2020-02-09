@@ -6,29 +6,43 @@
   .portfolio-menu {
     text-align: center;
     margin: 0 auto;
+    display: flex;
+    width: 100%;
 
-    ul {
+    &__ui-group {
+      width: 50%;
       display: flex;
       justify-content: center;
-      width: 100%;
-      li {
-        border: 1px solid rgba($color: $secondaryColor, $alpha: 1);
-        width: 100vw;
-        cursor: pointer;
-        transition: all 0.5s ease-in-out;
-        &:hover {
-          background-color: $secondaryColor;
-          color: rgba(lighten($color: $primaryColor, $amount: 7), 1);
-          transition: 0.8s;
-          cursor: pointer;
-        }
+      border: 1px solid rgba($color: $secondaryColor, $alpha: 1);
 
-        &.active {
-          background: rgba($color: $secondaryColor, $alpha: 1);
-          &:hover {
-            color: $primaryColor;
-            transition: 0.8s;
-          }
+      @include media-max-width(700) {
+        width: 100%;
+        flex-direction: column;
+      }
+      &--filter-select {
+        background-color: rgba(lighten($color: $primaryColor, $amount: 7), 0.3);
+        color: white;
+        padding: 5px;
+        border: none;
+        font-size: 20px;
+        box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+        text-align: center;
+        border-left: 1px solid rgba($color: $secondaryColor, $alpha: 1);
+        border-right: 1px solid rgba($color: $secondaryColor, $alpha: 1);
+        margin-left: 10px;
+        cursor: pointer;
+        @include media-max-width(700) {
+          margin: 0;
+          border: none;
+          border-top: 1px solid rgba($color: $secondaryColor, $alpha: 1);
+        }
+        &:hover,
+        &:focus,
+        & * {
+          color: $primaryColor;
+          background: $secondaryColor;
+          transition: all 0.5s ease-in-out;
+          cursor: pointer;
         }
       }
     }
