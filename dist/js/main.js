@@ -12,6 +12,21 @@ $(document).ready((function() {
   }));
 }));
 
+// page counter
+const countEl = document.getElementById("count");
+
+function updateVisitCount() {
+  fetch(
+    "https://api.countapi.xyz/update/francuskimiroslav.com/homepage/?amount=1 "
+  )
+    .then(res => res.json())
+    .then(res => {
+      countEl.innerHTML = `<span class="text-secondary"><i class="fas fa-hashtag"></i> ${res.value} </span>`;
+    });
+}
+
+updateVisitCount();
+
 // isotope initiate
 var $grid = $(".projects").isotope({
   itemSelector: ".item",
