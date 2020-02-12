@@ -13,6 +13,7 @@ $(document).ready(function() {
 
 // page counter
 const countEl = document.getElementById("count");
+console.log(countEl);
 
 function updateVisitCount() {
   fetch(
@@ -24,7 +25,9 @@ function updateVisitCount() {
     });
 }
 
-updateVisitCount();
+if (countEl != null) {
+  updateVisitCount();
+}
 
 // isotope initiate
 var $grid = $(".projects").isotope({

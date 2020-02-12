@@ -37,6 +37,7 @@ body {
       margin-bottom: 30px;
       padding: 5px 8px;
       background: rgba(lighten($primaryColor, 2), 0.5);
+      @include boxShadow;
     }
   }
   a {
@@ -89,9 +90,7 @@ body {
       padding: 5px 8px;
       background: rgba($primaryColor, 0.5);
       width: 15%;
-      box-shadow: 5px 5px rgba($primaryColor, 0.4),
-        10px 10px rgba($primaryColor, 0.3), 15px 15px rgba($primaryColor, 0.2),
-        20px 20px rgba($primaryColor, 0.1), 25px 25px rgba($primaryColor, 0.05);
+      @include boxShadow;
       @include media-max-width(800) {
         width: 100%;
         align-items: center;
