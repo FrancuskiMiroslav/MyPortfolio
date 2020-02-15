@@ -209,7 +209,7 @@
   position: relative;
 }
 
-/* line 93, src/sass/components/_mixins.scss */
+/* line 99, src/sass/components/_mixins.scss */
 .menu .nav-link:after, .menu .nav-link:before {
   content: " ";
   width: 0;
@@ -218,26 +218,26 @@
   border: 0px solid transparent;
 }
 
-/* line 102, src/sass/components/_mixins.scss */
+/* line 108, src/sass/components/_mixins.scss */
 .menu .nav-link:before {
   bottom: 0;
   left: 0;
 }
 
-/* line 107, src/sass/components/_mixins.scss */
+/* line 113, src/sass/components/_mixins.scss */
 .menu .nav-link:after {
   top: 0;
   right: 0;
 }
 
-/* line 112, src/sass/components/_mixins.scss */
+/* line 118, src/sass/components/_mixins.scss */
 .menu .nav-link:hover:before, .menu .nav-link:hover:after {
   width: 100%;
   height: 100%;
   border: 5px solid #ce9416;
 }
 
-/* line 119, src/sass/components/_mixins.scss */
+/* line 125, src/sass/components/_mixins.scss */
 .menu .nav-link:hover:before {
   border-right: none;
   border-bottom: none;
@@ -245,7 +245,7 @@
   transition: height 0.5s linear, width 0.5s linear 0.5s;
 }
 
-/* line 125, src/sass/components/_mixins.scss */
+/* line 131, src/sass/components/_mixins.scss */
 .menu .nav-link:hover:after {
   border-left: none;
   border-top: none;
@@ -340,7 +340,7 @@
   background-position: center;
 }
 
-/* line 71, src/sass/components/_mixins.scss */
+/* line 77, src/sass/components/_mixins.scss */
 #about-img:before {
   content: "";
   position: fixed;
@@ -601,7 +601,7 @@
           box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.25), 0 1px rgba(255, 255, 255, 0.08);
 }
 
-/* line 214, src/sass/components/_mixins.scss */
+/* line 220, src/sass/components/_mixins.scss */
 .about__info .animation-bar-90 span {
   text-align: right;
   color: #642929;
@@ -618,7 +618,7 @@
   background-image: linear-gradient(to right, #642929, #ce9416);
 }
 
-/* line 228, src/sass/components/_mixins.scss */
+/* line 234, src/sass/components/_mixins.scss */
 .about__info .animation-bar-90 span:after {
   position: absolute;
   top: 0;
@@ -692,7 +692,7 @@
           box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.25), 0 1px rgba(255, 255, 255, 0.08);
 }
 
-/* line 214, src/sass/components/_mixins.scss */
+/* line 220, src/sass/components/_mixins.scss */
 .about__info .animation-bar-80 span {
   text-align: right;
   color: #642929;
@@ -709,7 +709,7 @@
   background-image: linear-gradient(to right, #642929, #ce9416);
 }
 
-/* line 228, src/sass/components/_mixins.scss */
+/* line 234, src/sass/components/_mixins.scss */
 .about__info .animation-bar-80 span:after {
   position: absolute;
   top: 0;
@@ -774,7 +774,7 @@
           box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.25), 0 1px rgba(255, 255, 255, 0.08);
 }
 
-/* line 214, src/sass/components/_mixins.scss */
+/* line 220, src/sass/components/_mixins.scss */
 .about__info .animation-bar-70 span {
   text-align: right;
   color: #642929;
@@ -791,7 +791,7 @@
   background-image: linear-gradient(to right, #642929, #ce9416);
 }
 
-/* line 228, src/sass/components/_mixins.scss */
+/* line 234, src/sass/components/_mixins.scss */
 .about__info .animation-bar-70 span:after {
   position: absolute;
   top: 0;
@@ -856,7 +856,7 @@
           box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.25), 0 1px rgba(255, 255, 255, 0.08);
 }
 
-/* line 214, src/sass/components/_mixins.scss */
+/* line 220, src/sass/components/_mixins.scss */
 .about__info .animation-bar-40 span {
   text-align: right;
   color: #642929;
@@ -873,7 +873,7 @@
   background-image: linear-gradient(to right, #642929, #ce9416);
 }
 
-/* line 228, src/sass/components/_mixins.scss */
+/* line 234, src/sass/components/_mixins.scss */
 .about__info .animation-bar-40 span:after {
   position: absolute;
   top: 0;
@@ -931,7 +931,7 @@
   background-position: center;
 }
 
-/* line 71, src/sass/components/_mixins.scss */
+/* line 77, src/sass/components/_mixins.scss */
 #work-img:before {
   content: "";
   position: fixed;
@@ -1104,7 +1104,7 @@
   background-position: center;
 }
 
-/* line 71, src/sass/components/_mixins.scss */
+/* line 77, src/sass/components/_mixins.scss */
 #contact-img:before {
   content: "";
   position: fixed;
@@ -1354,7 +1354,7 @@
   border-width: 0;
 }
 
-/* line 182, src/sass/components/_mixins.scss */
+/* line 188, src/sass/components/_mixins.scss */
 #contact .form .btn:hover, #contact .form #work .btn-light:hover, #work #contact .form .btn-light:hover, #contact .form #work .btn-dark:hover, #work #contact .form .btn-dark:hover {
   background: #ce9416;
   color: #642929;
@@ -1377,7 +1377,7 @@
   background-position: center;
 }
 
-/* line 71, src/sass/components/_mixins.scss */
+/* line 77, src/sass/components/_mixins.scss */
 #bg-img:before {
   content: "";
   position: fixed;
@@ -1405,7 +1405,7 @@
   font-weight: bold;
 }
 
-/* line 182, src/sass/components/_mixins.scss */
+/* line 188, src/sass/components/_mixins.scss */
 .success__btn:hover {
   background: #ce9416;
   color: #642929;
@@ -1445,20 +1445,20 @@ html {
   font-family: "Roboto", sans-serif, "Gilroy", cursive, Verdana, Geneva, Tahoma, sans-serif;
 }
 
-/* line 41, src/sass/components/_mixins.scss */
+/* line 47, src/sass/components/_mixins.scss */
 html {
   font-size: 14px;
 }
 
 @media screen and (min-width: 320px) {
-  /* line 41, src/sass/components/_mixins.scss */
+  /* line 47, src/sass/components/_mixins.scss */
   html {
     font-size: calc( 14px + 10 * ((100vw - 320px) / 3520));
   }
 }
 
 @media screen and (min-width: 3840px) {
-  /* line 41, src/sass/components/_mixins.scss */
+  /* line 47, src/sass/components/_mixins.scss */
   html {
     font-size: 24px;
   }
@@ -1495,7 +1495,7 @@ a {
   background-position: top;
 }
 
-/* line 71, src/sass/components/_mixins.scss */
+/* line 77, src/sass/components/_mixins.scss */
 #home-img:before {
   content: "";
   position: fixed;
@@ -1544,61 +1544,100 @@ body h3.sm-heading {
   margin-bottom: 30px;
   padding: 5px 8px;
   background: rgba(107, 44, 44, 0.5);
+  -webkit-box-shadow: 5px 5px rgba(100, 41, 41, 0.4), 10px 10px rgba(100, 41, 41, 0.3), 15px 15px rgba(100, 41, 41, 0.2), 20px 20px rgba(100, 41, 41, 0.1), 25px 25px rgba(100, 41, 41, 0.05);
+          box-shadow: 5px 5px rgba(100, 41, 41, 0.4), 10px 10px rgba(100, 41, 41, 0.3), 15px 15px rgba(100, 41, 41, 0.2), 20px 20px rgba(100, 41, 41, 0.1), 25px 25px rgba(100, 41, 41, 0.05);
 }
 
-/* line 42, src/sass/styles.scss */
+/* line 43, src/sass/styles.scss */
 body a {
   color: #fff;
 }
 
-/* line 45, src/sass/styles.scss */
+/* line 46, src/sass/styles.scss */
 body header {
   position: fixed;
   z-index: 2;
   width: 100%;
 }
 
-/* line 51, src/sass/styles.scss */
+/* line 52, src/sass/styles.scss */
 body .text-primary {
   text-transform: uppercase;
   color: #522222;
   font-weight: bold;
 }
 
-/* line 57, src/sass/styles.scss */
+/* line 58, src/sass/styles.scss */
 body .text-secondary {
   color: #ce9416;
 }
 
-/* line 61, src/sass/styles.scss */
+/* line 62, src/sass/styles.scss */
 body main {
   padding: 40px;
 }
 
 /* line 65, src/sass/styles.scss */
+body main .icons {
+  margin-bottom: 15px;
+}
+
+/* line 67, src/sass/styles.scss */
 body main .icons a {
   padding: 8px;
   margin: 0 10px;
 }
 
-/* line 69, src/sass/styles.scss */
+/* line 71, src/sass/styles.scss */
 body main .icons a:hover {
   color: #ce9416;
   -webkit-transition: all 0.8s ease-out;
   transition: all 0.8s ease-out;
 }
 
-/* line 76, src/sass/styles.scss */
+/* line 78, src/sass/styles.scss */
 body main#home {
   overflow: hidden;
 }
 
-/* line 78, src/sass/styles.scss */
+/* line 80, src/sass/styles.scss */
 body main#home h1 {
   margin-top: 20%;
 }
 
 /* line 85, src/sass/styles.scss */
+body main .counter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding: 5px 8px;
+  background: rgba(100, 41, 41, 0.5);
+  width: 15%;
+  -webkit-box-shadow: 5px 5px rgba(100, 41, 41, 0.4), 10px 10px rgba(100, 41, 41, 0.3), 15px 15px rgba(100, 41, 41, 0.2), 20px 20px rgba(100, 41, 41, 0.1), 25px 25px rgba(100, 41, 41, 0.05);
+          box-shadow: 5px 5px rgba(100, 41, 41, 0.4), 10px 10px rgba(100, 41, 41, 0.3), 15px 15px rgba(100, 41, 41, 0.2), 20px 20px rgba(100, 41, 41, 0.1), 25px 25px rgba(100, 41, 41, 0.05);
+}
+
+@media (max-width: 800px) {
+  /* line 85, src/sass/styles.scss */
+  body main .counter {
+    width: 100%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+/* line 102, src/sass/styles.scss */
 .btn, #work .btn-light, #work .btn-dark {
   display: block;
   padding: 8px 16px;
@@ -1608,7 +1647,7 @@ body main#home h1 {
   cursor: pointer;
 }
 
-/* line 182, src/sass/components/_mixins.scss */
+/* line 188, src/sass/components/_mixins.scss */
 .btn:hover, #work .btn-light:hover, #work .btn-dark:hover {
   background: #ce9416;
   color: #642929;
@@ -1616,7 +1655,7 @@ body main#home h1 {
   transition: all 0.8s ease-out;
 }
 
-/* line 89, src/sass/styles.scss */
+/* line 106, src/sass/styles.scss */
 .main-footer {
   margin-top: auto;
   text-align: center;
@@ -1626,7 +1665,7 @@ body main#home h1 {
   height: 60px;
 }
 
-/* line 97, src/sass/styles.scss */
+/* line 114, src/sass/styles.scss */
 .main-footer__copy {
   color: #ce9416;
 }
