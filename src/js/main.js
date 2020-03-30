@@ -16,9 +16,7 @@ const countEl = document.getElementById("count");
 console.log(countEl);
 
 function updateVisitCount() {
-  fetch(
-    "https://api.countapi.xyz/update/francuskimiroslav.com/homepage/?amount=1 "
-  )
+  fetch("https://api.countapi.xyz/update/francuskimiroslav.com/homepage/?amount=1 ")
     .then(res => res.json())
     .then(res => {
       countEl.innerHTML = `<span class="text-secondary"><i class="fas fa-hashtag"></i> ${res.value} </span>`;
