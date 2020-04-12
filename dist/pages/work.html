@@ -60,7 +60,7 @@
       <aside class="portfolio-menu">
         <div class="portfolio-menu__ui-group">
           <h3>
-            Front-end tech
+            Tools
           </h3>
           <select class="portfolio-menu__ui-group--filter-select" value-group="tech">
             <option value="">any</option>
@@ -68,6 +68,20 @@
             <option value=".js">JavaScript</option>
             <option value=".api">API</option>
             <option value=".wp">WordPress</option>
+          </select>
+        </div>
+        <div class="portfolio-menu__ui-group">
+          <h3>
+           Frameworks
+          </h3>
+          <select class="portfolio-menu__ui-group--filter-select" value-group="js-frame">
+            <option value="">any</option>
+            <option value=".react">React</option>
+            <option value=".vue">Vue</option>
+            <option value=".angular">Angular</option>
+            <option value=".bootstrap">Bootstrap</option>
+            <option value=".materialize">Materialize</option>
+            <option value=".tailwind">Tailwind</option>
           </select>
         </div>
         <div class="portfolio-menu__ui-group">
@@ -84,6 +98,35 @@
         </div>
       </aside>
       <section class="projects">
+        <div class="item js react api tailwind 2020">
+          <div class="projects__hover">
+            <input type="checkbox" id="zoom19" />
+            <label for="zoom19">
+              <img src="../images/projects/ImageGallery-React-TailwindCSS-2020-04-12-23_14_21-min.jpg"
+                alt="ReactApp" />
+            </label>
+          </div>
+          <div class="projects__buttons">
+            <a href="../images/projects/ImageGallery-React-TailwindCSS-2020-04-12-23_14_21.jpg" class="btn-light"
+              data-lightbox="mygallery" data-title="2020. Image Gallery - React, TailwindCSS and Pixabay API">
+              <i class="fas fa-eye"></i>
+              Project
+            </a>
+            <div class="projects__flex">
+              <a href="https://github.com/FrancuskiMiroslav/ImageGallery-React-TailwindCSS" class="btn-dark"
+                target="_blank">
+                <i class="fab fa-github"></i>
+                GitHub
+              </a>
+              <a href="https://francuskimiroslav.github.io/ImageGallery-React-TailwindCSS/" class="btn-dark"
+                target="_blank">
+                <i class="fa fa-link" aria-hidden="true"></i>
+                Website
+              </a>
+            </div>
+          </div>
+        </div>
+
         <div class="item scss js 2020">
           <div class="projects__hover">
             <input type="checkbox" id="zoom18" />
@@ -281,7 +324,7 @@
           </div>
         </div>
 
-        <div class="item js 2019">
+        <div class="item js bootstrap 2019">
           <div class="projects__hover">
             <input type="checkbox" id="zoom11" />
             <label for="zoom11">
@@ -328,7 +371,7 @@
           </div>
         </div>
 
-        <div class="item js 2019">
+        <div class="item js materialize 2019">
           <div class="projects__hover">
             <input type="checkbox" id="zoom9" />
             <label for="zoom9">

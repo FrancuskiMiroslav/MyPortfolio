@@ -8,6 +8,9 @@
     margin: 0 auto;
     display: flex;
     width: 100%;
+    @include media-max-width(450) {
+      flex-direction: column;
+    }
 
     &__ui-group {
       width: 50%;
@@ -22,7 +25,6 @@
       &--filter-select {
         background-color: rgba(lighten($color: $primaryColor, $amount: 7), 0.3);
         color: white;
-        padding: 5px;
         border: none;
         font-size: 20px;
         box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
@@ -31,6 +33,7 @@
         border-right: 1px solid rgba($color: $secondaryColor, $alpha: 1);
         margin-left: 10px;
         cursor: pointer;
+        max-width: 100%;
         @include media-max-width(700) {
           margin: 0;
           border: none;

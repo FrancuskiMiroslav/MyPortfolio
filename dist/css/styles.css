@@ -953,7 +953,17 @@
   width: 100%;
 }
 
-/* line 12, src/sass/pages/_work.scss */
+@media (max-width: 450px) {
+  /* line 6, src/sass/pages/_work.scss */
+  #work .portfolio-menu {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+/* line 15, src/sass/pages/_work.scss */
 #work .portfolio-menu__ui-group {
   width: 50%;
   display: -webkit-box;
@@ -966,7 +976,7 @@
 }
 
 @media (max-width: 700px) {
-  /* line 12, src/sass/pages/_work.scss */
+  /* line 15, src/sass/pages/_work.scss */
   #work .portfolio-menu__ui-group {
     width: 100%;
     -webkit-box-orient: vertical;
@@ -976,11 +986,10 @@
   }
 }
 
-/* line 22, src/sass/pages/_work.scss */
+/* line 25, src/sass/pages/_work.scss */
 #work .portfolio-menu__ui-group--filter-select {
   background-color: rgba(125, 51, 51, 0.3);
   color: white;
-  padding: 5px;
   border: none;
   font-size: 20px;
   -webkit-box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
@@ -990,10 +999,11 @@
   border-right: 1px solid #ce9416;
   margin-left: 10px;
   cursor: pointer;
+  max-width: 100%;
 }
 
 @media (max-width: 700px) {
-  /* line 22, src/sass/pages/_work.scss */
+  /* line 25, src/sass/pages/_work.scss */
   #work .portfolio-menu__ui-group--filter-select {
     margin: 0;
     border: none;
@@ -1001,7 +1011,7 @@
   }
 }
 
-/* line 39, src/sass/pages/_work.scss */
+/* line 42, src/sass/pages/_work.scss */
 #work .portfolio-menu__ui-group--filter-select:hover, #work .portfolio-menu__ui-group--filter-select:focus,
 #work .portfolio-menu__ui-group--filter-select * {
   color: #642929;
@@ -1011,7 +1021,7 @@
   cursor: pointer;
 }
 
-/* line 51, src/sass/pages/_work.scss */
+/* line 54, src/sass/pages/_work.scss */
 #work .projects {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1020,7 +1030,7 @@
       flex-wrap: wrap;
 }
 
-/* line 55, src/sass/pages/_work.scss */
+/* line 58, src/sass/pages/_work.scss */
 #work .projects .item {
   width: 376px;
   text-align: center;
@@ -1028,25 +1038,25 @@
 }
 
 @media (max-width: 870px) {
-  /* line 55, src/sass/pages/_work.scss */
+  /* line 58, src/sass/pages/_work.scss */
   #work .projects .item {
     width: 100%;
   }
 }
 
-/* line 65, src/sass/pages/_work.scss */
+/* line 68, src/sass/pages/_work.scss */
 #work .projects__hover {
   overflow: hidden;
   margin-bottom: 6px;
   height: 500px;
 }
 
-/* line 69, src/sass/pages/_work.scss */
+/* line 72, src/sass/pages/_work.scss */
 #work .projects__hover input[type="checkbox"] {
   display: none;
 }
 
-/* line 71, src/sass/pages/_work.scss */
+/* line 74, src/sass/pages/_work.scss */
 #work .projects__hover input[type="checkbox"]:checked ~ label > img {
   -webkit-transform: scale(1.5);
           transform: scale(1.5);
@@ -1054,7 +1064,7 @@
   cursor: zoom-out;
 }
 
-/* line 77, src/sass/pages/_work.scss */
+/* line 80, src/sass/pages/_work.scss */
 #work .projects__hover img {
   -webkit-transition: -webkit-transform 0.5s ease;
   transition: -webkit-transform 0.5s ease;
@@ -1071,7 +1081,7 @@
      object-position: top;
 }
 
-/* line 88, src/sass/pages/_work.scss */
+/* line 91, src/sass/pages/_work.scss */
 #work .projects__flex {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1079,18 +1089,18 @@
   text-align: center;
 }
 
-/* line 91, src/sass/pages/_work.scss */
+/* line 94, src/sass/pages/_work.scss */
 #work .projects__flex a {
   width: 50%;
 }
 
-/* line 97, src/sass/pages/_work.scss */
+/* line 100, src/sass/pages/_work.scss */
 #work .btn-light {
   background: #7d3333;
   border-color: #4b1f1f;
 }
 
-/* line 103, src/sass/pages/_work.scss */
+/* line 106, src/sass/pages/_work.scss */
 #work .btn-dark {
   background: #4b1f1f;
   border-color: #7d3333;
