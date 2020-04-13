@@ -1,7 +1,7 @@
 /*! project-name v0.0.1 | (c) 2020 Francuski Miroslav | MIT License | http://link-to-your-git-repo.com */
 // navigation
-$(document).ready((function() {
-  $(".menu-btn").click((function() {
+$(document).ready((function () {
+  $(".menu-btn").click((function () {
     if (!$(this).hasClass("close")) {
       $(".menu-btn").addClass("close");
       $(".menu, .menu-nav, .menu-branding, .nav-item").addClass("show");
@@ -36,7 +36,7 @@ var $grid = $(".projects").isotope({
 
 var filters = {};
 
-$(".portfolio-menu").on("change", (function(event) {
+$(".portfolio-menu").on("change", (function (event) {
   var $select = $(event.target);
   // get group key
   var filterGroup = $select.attr("value-group");
