@@ -209,7 +209,7 @@
   position: relative;
 }
 
-/* line 96, src/sass/components/_mixins.scss */
+/* line 160, src/sass/components/_mixins.scss */
 .menu .nav-link:after, .menu .nav-link:before {
   content: " ";
   width: 0;
@@ -218,26 +218,26 @@
   border: 0px solid transparent;
 }
 
-/* line 105, src/sass/components/_mixins.scss */
+/* line 169, src/sass/components/_mixins.scss */
 .menu .nav-link:before {
   bottom: 0;
   left: 0;
 }
 
-/* line 110, src/sass/components/_mixins.scss */
+/* line 174, src/sass/components/_mixins.scss */
 .menu .nav-link:after {
   top: 0;
   right: 0;
 }
 
-/* line 115, src/sass/components/_mixins.scss */
+/* line 179, src/sass/components/_mixins.scss */
 .menu .nav-link:hover:before, .menu .nav-link:hover:after {
   width: 100%;
   height: 100%;
   border: 5px solid #ce9416;
 }
 
-/* line 122, src/sass/components/_mixins.scss */
+/* line 186, src/sass/components/_mixins.scss */
 .menu .nav-link:hover:before {
   border-right: none;
   border-bottom: none;
@@ -245,7 +245,7 @@
   transition: height 0.5s linear, width 0.5s linear 0.5s;
 }
 
-/* line 128, src/sass/components/_mixins.scss */
+/* line 192, src/sass/components/_mixins.scss */
 .menu .nav-link:hover:after {
   border-left: none;
   border-top: none;
@@ -340,7 +340,7 @@
   background-position: center;
 }
 
-/* line 74, src/sass/components/_mixins.scss */
+/* line 138, src/sass/components/_mixins.scss */
 #about-img:before {
   content: "";
   position: fixed;
@@ -601,7 +601,7 @@
           box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.25), 0 1px rgba(255, 255, 255, 0.08);
 }
 
-/* line 214, src/sass/components/_mixins.scss */
+/* line 278, src/sass/components/_mixins.scss */
 .about__info .animation-bar-90 span {
   text-align: right;
   color: #642929;
@@ -618,7 +618,7 @@
   background-image: linear-gradient(to right, #642929, #ce9416);
 }
 
-/* line 228, src/sass/components/_mixins.scss */
+/* line 292, src/sass/components/_mixins.scss */
 .about__info .animation-bar-90 span:after {
   position: absolute;
   top: 0;
@@ -692,7 +692,7 @@
           box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.25), 0 1px rgba(255, 255, 255, 0.08);
 }
 
-/* line 214, src/sass/components/_mixins.scss */
+/* line 278, src/sass/components/_mixins.scss */
 .about__info .animation-bar-80 span {
   text-align: right;
   color: #642929;
@@ -709,7 +709,7 @@
   background-image: linear-gradient(to right, #642929, #ce9416);
 }
 
-/* line 228, src/sass/components/_mixins.scss */
+/* line 292, src/sass/components/_mixins.scss */
 .about__info .animation-bar-80 span:after {
   position: absolute;
   top: 0;
@@ -774,7 +774,7 @@
           box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.25), 0 1px rgba(255, 255, 255, 0.08);
 }
 
-/* line 214, src/sass/components/_mixins.scss */
+/* line 278, src/sass/components/_mixins.scss */
 .about__info .animation-bar-70 span {
   text-align: right;
   color: #642929;
@@ -791,7 +791,7 @@
   background-image: linear-gradient(to right, #642929, #ce9416);
 }
 
-/* line 228, src/sass/components/_mixins.scss */
+/* line 292, src/sass/components/_mixins.scss */
 .about__info .animation-bar-70 span:after {
   position: absolute;
   top: 0;
@@ -856,7 +856,7 @@
           box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.25), 0 1px rgba(255, 255, 255, 0.08);
 }
 
-/* line 214, src/sass/components/_mixins.scss */
+/* line 278, src/sass/components/_mixins.scss */
 .about__info .animation-bar-40 span {
   text-align: right;
   color: #642929;
@@ -873,7 +873,7 @@
   background-image: linear-gradient(to right, #642929, #ce9416);
 }
 
-/* line 228, src/sass/components/_mixins.scss */
+/* line 292, src/sass/components/_mixins.scss */
 .about__info .animation-bar-40 span:after {
   position: absolute;
   top: 0;
@@ -931,7 +931,7 @@
   background-position: center;
 }
 
-/* line 74, src/sass/components/_mixins.scss */
+/* line 138, src/sass/components/_mixins.scss */
 #work-img:before {
   content: "";
   position: fixed;
@@ -1059,27 +1059,31 @@
   overflow: hidden;
   margin-bottom: 6px;
   height: 400px;
+  -webkit-perspective: 500px;
+          perspective: 500px;
 }
 
-/* line 81, src/sass/pages/_work.scss */
+/* line 82, src/sass/pages/_work.scss */
 #work .projects__hover input[type="checkbox"] {
   display: none;
 }
 
-/* line 83, src/sass/pages/_work.scss */
+/* line 84, src/sass/pages/_work.scss */
 #work .projects__hover input[type="checkbox"]:checked ~ label > img {
-  -webkit-transform: scale(1.5) rotate3d(1, 1, 1, 360deg);
-          transform: scale(1.5) rotate3d(1, 1, 1, 360deg);
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform: scale(1.5) rotate3d(1, 1, 1, 360deg) rotateX(50deg);
+          transform: scale(1.5) rotate3d(1, 1, 1, 360deg) rotateX(50deg);
   cursor: -webkit-zoom-out;
   cursor: zoom-out;
 }
 
-/* line 89, src/sass/pages/_work.scss */
+/* line 91, src/sass/pages/_work.scss */
 #work .projects__hover img {
-  -webkit-transition: -webkit-transform 1s ease;
-  transition: -webkit-transform 1s ease;
-  transition: transform 1s ease;
-  transition: transform 1s ease, -webkit-transform 1s ease;
+  -webkit-transition: -webkit-transform 2s ease;
+  transition: -webkit-transform 2s ease;
+  transition: transform 2s ease;
+  transition: transform 2s ease, -webkit-transform 2s ease;
   cursor: -webkit-zoom-in;
   cursor: zoom-in;
   width: 100%;
@@ -1091,7 +1095,7 @@
      object-position: center;
 }
 
-/* line 100, src/sass/pages/_work.scss */
+/* line 102, src/sass/pages/_work.scss */
 #work .projects__flex {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1099,18 +1103,18 @@
   text-align: center;
 }
 
-/* line 103, src/sass/pages/_work.scss */
+/* line 105, src/sass/pages/_work.scss */
 #work .projects__flex a {
   width: 50%;
 }
 
-/* line 109, src/sass/pages/_work.scss */
+/* line 111, src/sass/pages/_work.scss */
 #work .btn-light {
   background: #7d3333;
   border-color: #4b1f1f;
 }
 
-/* line 115, src/sass/pages/_work.scss */
+/* line 117, src/sass/pages/_work.scss */
 #work .btn-dark {
   background: #4b1f1f;
   border-color: #7d3333;
@@ -1124,7 +1128,7 @@
   background-position: center;
 }
 
-/* line 74, src/sass/components/_mixins.scss */
+/* line 138, src/sass/components/_mixins.scss */
 #contact-img:before {
   content: "";
   position: fixed;
@@ -1374,7 +1378,7 @@
   border-width: 0;
 }
 
-/* line 183, src/sass/components/_mixins.scss */
+/* line 247, src/sass/components/_mixins.scss */
 #contact .form .btn:hover, #contact .form #work .btn-light:hover, #work #contact .form .btn-light:hover, #contact .form #work .btn-dark:hover, #work #contact .form .btn-dark:hover {
   background: #ce9416;
   color: #642929;
@@ -1397,7 +1401,7 @@
   background-position: center;
 }
 
-/* line 74, src/sass/components/_mixins.scss */
+/* line 138, src/sass/components/_mixins.scss */
 #bg-img:before {
   content: "";
   position: fixed;
@@ -1425,7 +1429,7 @@
   font-weight: bold;
 }
 
-/* line 183, src/sass/components/_mixins.scss */
+/* line 247, src/sass/components/_mixins.scss */
 .success__btn:hover {
   background: #ce9416;
   color: #642929;
@@ -1465,26 +1469,104 @@ html {
   font-family: "Roboto", sans-serif, "Gilroy", cursive, Verdana, Geneva, Tahoma, sans-serif;
 }
 
-/* line 45, src/sass/components/_mixins.scss */
+/* line 109, src/sass/components/_mixins.scss */
 html {
   font-size: 14px;
 }
 
 @media screen and (min-width: 320px) {
-  /* line 45, src/sass/components/_mixins.scss */
+  /* line 109, src/sass/components/_mixins.scss */
   html {
     font-size: calc( 14px + 10 * ((100vw - 320px) / 3520));
   }
 }
 
 @media screen and (min-width: 3840px) {
-  /* line 45, src/sass/components/_mixins.scss */
+  /* line 109, src/sass/components/_mixins.scss */
   html {
     font-size: 24px;
   }
 }
 
-/* line 10, src/sass/components/_mixins.scss */
+/* line 11, src/sass/components/_mixins.scss */
+*::-webkit-scrollbar {
+  max-width: 20px;
+}
+
+/* line 15, src/sass/components/_mixins.scss */
+*::-webkit-scrollbar-track, *::-webkit-scrollbar-corner, *::-webkit-resizer {
+  -webkit-box-shadow: inset 0 0 15px #642929;
+          box-shadow: inset 0 0 15px #642929;
+  background-color: #642929;
+}
+
+/* line 20, src/sass/components/_mixins.scss */
+*::-webkit-scrollbar-thumb {
+  background-color: #ce9416;
+  outline: 1px solid #ce9416;
+}
+
+/* line 25, src/sass/components/_mixins.scss */
+*::-webkit-scrollbar-thumb:hover {
+  background: rgba(206, 148, 22, 0.4);
+}
+
+/* line 29, src/sass/components/_mixins.scss */
+*::-webkit-scrollbar-button:single-button {
+  background-color: #642929;
+  display: block;
+  border-style: solid;
+}
+
+/* Up */
+/* line 35, src/sass/components/_mixins.scss */
+*::-webkit-scrollbar-button:single-button:vertical:decrement {
+  border-width: 0 7px 20px 7px;
+  border-color: transparent transparent #ce9416 transparent;
+}
+
+/* line 40, src/sass/components/_mixins.scss */
+*::-webkit-scrollbar-button:single-button:vertical:decrement:hover {
+  border-color: transparent transparent rgba(206, 148, 22, 0.4) transparent;
+}
+
+/* Down */
+/* line 44, src/sass/components/_mixins.scss */
+*::-webkit-scrollbar-button:single-button:vertical:increment {
+  border-width: 20px 7px 0 7px;
+  border-color: #ce9416 transparent transparent transparent;
+}
+
+/* line 49, src/sass/components/_mixins.scss */
+*::-webkit-scrollbar-button:vertical:single-button:increment:hover {
+  border-color: rgba(206, 148, 22, 0.4) transparent transparent transparent;
+}
+
+/* Left */
+/* line 54, src/sass/components/_mixins.scss */
+*::-webkit-scrollbar-button:single-button:horizontal:decrement {
+  border-width: 7px 20px 7px 0px;
+  border-color: transparent #ce9416 transparent transparent;
+}
+
+/* line 59, src/sass/components/_mixins.scss */
+*::-webkit-scrollbar-button:single-button:horizontal:decrement:hover {
+  border-color: transparent rgba(206, 148, 22, 0.4) transparent transparent;
+}
+
+/* right */
+/* line 63, src/sass/components/_mixins.scss */
+*::-webkit-scrollbar-button:single-button:horizontal:increment {
+  border-width: 7px 0px 7px 20px;
+  border-color: transparent transparent transparent #ce9416;
+}
+
+/* line 68, src/sass/components/_mixins.scss */
+*::-webkit-scrollbar-button:single-button:horizontal:hover {
+  border-color: transparent transparent transparent rgba(206, 148, 22, 0.4);
+}
+
+/* line 72, src/sass/components/_mixins.scss */
 *,
 *:before,
 *:after {
@@ -1494,13 +1576,13 @@ html {
   margin: 0;
 }
 
-/* line 18, src/sass/components/_mixins.scss */
+/* line 80, src/sass/components/_mixins.scss */
 ul,
 ol {
   list-style: none;
 }
 
-/* line 23, src/sass/components/_mixins.scss */
+/* line 85, src/sass/components/_mixins.scss */
 a {
   text-decoration: none;
   color: #ffffff;
@@ -1515,7 +1597,7 @@ a {
   background-position: top;
 }
 
-/* line 74, src/sass/components/_mixins.scss */
+/* line 138, src/sass/components/_mixins.scss */
 #home-img:before {
   content: "";
   position: fixed;
@@ -1667,7 +1749,7 @@ body main .counter {
   cursor: pointer;
 }
 
-/* line 183, src/sass/components/_mixins.scss */
+/* line 247, src/sass/components/_mixins.scss */
 .btn:hover, #work .btn-light:hover, #work .btn-dark:hover {
   background: #ce9416;
   color: #642929;
