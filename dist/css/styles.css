@@ -1068,18 +1068,18 @@
 
 /* line 83, src/sass/pages/_work.scss */
 #work .projects__hover input[type="checkbox"]:checked ~ label > img {
-  -webkit-transform: scale(1.5);
-          transform: scale(1.5);
+  -webkit-transform: scale(1.5) rotate3d(1, 1, 1, 360deg);
+          transform: scale(1.5) rotate3d(1, 1, 1, 360deg);
   cursor: -webkit-zoom-out;
   cursor: zoom-out;
 }
 
 /* line 89, src/sass/pages/_work.scss */
 #work .projects__hover img {
-  -webkit-transition: -webkit-transform 0.5s ease;
-  transition: -webkit-transform 0.5s ease;
-  transition: transform 0.5s ease;
-  transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+  -webkit-transition: -webkit-transform 1s ease;
+  transition: -webkit-transform 1s ease;
+  transition: transform 1s ease;
+  transition: transform 1s ease, -webkit-transform 1s ease;
   cursor: -webkit-zoom-in;
   cursor: zoom-in;
   width: 100%;
@@ -1087,8 +1087,8 @@
   border: 5px solid #7d3333;
   -o-object-fit: contain;
      object-fit: contain;
-  -o-object-position: top;
-     object-position: top;
+  -o-object-position: center;
+     object-position: center;
 }
 
 /* line 100, src/sass/pages/_work.scss */
