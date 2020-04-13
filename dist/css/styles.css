@@ -1058,7 +1058,7 @@
 #work .projects__hover {
   overflow: hidden;
   margin-bottom: 6px;
-  height: 30%;
+  min-height: 200px;
 }
 
 /* line 81, src/sass/pages/_work.scss */
@@ -1083,7 +1083,7 @@
   cursor: -webkit-zoom-in;
   cursor: zoom-in;
   width: 100%;
-  height: 30%;
+  min-height: 200px;
   border: 5px solid #7d3333;
   -o-object-fit: cover;
      object-fit: cover;
