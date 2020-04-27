@@ -18,15 +18,50 @@
     transform: rotate(180deg);
     .btn-line {
       &:nth-child(1) {
-        transform: rotate(45deg) translate(5px, 5px);
+        transform: rotate(45deg) translate(10px, 10px);
       }
 
       &:nth-child(2) {
-        display: none;
+        transform: translateX(-200%);
       }
 
       &:nth-child(3) {
         transform: rotate(135deg) translate(0px, 0px);
+      }
+    }
+  }
+
+  &:hover {
+    .btn-line {
+      background: rgba($secondaryColor, 1);
+
+      &:nth-child(1) {
+        transform: translateY(-5px) rotate(40deg);
+      }
+
+      &:nth-child(2) {
+        transform: rotate(40deg);
+      }
+
+      &:nth-child(3) {
+        transform: translateY(5px) rotate(40deg);
+      }
+    }
+  }
+
+  &.close:hover {
+    .btn-line {
+      &:nth-child(1) {
+        transform: translateY(-5px) rotate(-40deg);
+      }
+
+      &:nth-child(2) {
+        transform: rotate(-40deg);
+        display: block;
+      }
+
+      &:nth-child(3) {
+        transform: translateY(5px) rotate(-40deg);
       }
     }
   }
