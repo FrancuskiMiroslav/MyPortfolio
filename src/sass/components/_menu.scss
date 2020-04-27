@@ -18,11 +18,11 @@
     transform: rotate(180deg);
     .btn-line {
       &:nth-child(1) {
-        transform: rotate(45deg) translate(10px, 10px);
+        transform: rotate(45deg) translate(11px, 11px);
       }
 
       &:nth-child(2) {
-        transform: translateX(-200%);
+        transform: translateX(-200%) rotate(180deg);
       }
 
       &:nth-child(3) {
@@ -31,37 +31,45 @@
     }
   }
 
-  &:hover {
+  &.close:hover {
     .btn-line {
       background: rgba($secondaryColor, 1);
-
-      &:nth-child(1) {
-        transform: translateY(-5px) rotate(40deg);
-      }
-
-      &:nth-child(2) {
-        transform: rotate(40deg);
-      }
-
-      &:nth-child(3) {
-        transform: translateY(5px) rotate(40deg);
-      }
     }
   }
 
-  &.close:hover {
-    .btn-line {
-      &:nth-child(1) {
-        transform: translateY(-5px) rotate(-40deg);
-      }
+  @include media-min-width(800) {
+    &:hover {
+      .btn-line {
+        &:nth-child(1) {
+          transform: translateY(-5px) rotate(40deg);
+        }
 
-      &:nth-child(2) {
-        transform: rotate(-40deg);
-        display: block;
-      }
+        &:nth-child(2) {
+          transform: rotate(40deg);
+        }
 
-      &:nth-child(3) {
-        transform: translateY(5px) rotate(-40deg);
+        &:nth-child(3) {
+          transform: translateY(5px) rotate(40deg);
+        }
+      }
+    }
+
+    &.close:hover {
+      .btn-line {
+        background: rgba($secondaryColor, 1);
+
+        &:nth-child(1) {
+          transform: translateY(-5px) rotate(-40deg);
+        }
+
+        &:nth-child(2) {
+          transform: rotate(-40deg);
+          display: block;
+        }
+
+        &:nth-child(3) {
+          transform: translateY(5px) rotate(-40deg);
+        }
       }
     }
   }
