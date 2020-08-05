@@ -58,24 +58,24 @@
 }
 
 @media (min-width: 800px) {
-  /* line 43, src/sass/components/_menu.scss */
+  /* line 42, src/sass/components/_menu.scss */
+  .menu-btn:hover .btn-line {
+    background: #ce9416;
+  }
+  /* line 45, src/sass/components/_menu.scss */
   .menu-btn:hover .btn-line:nth-child(1) {
     -webkit-transform: translateY(-5px) rotate(40deg);
             transform: translateY(-5px) rotate(40deg);
   }
-  /* line 47, src/sass/components/_menu.scss */
+  /* line 49, src/sass/components/_menu.scss */
   .menu-btn:hover .btn-line:nth-child(2) {
     -webkit-transform: rotate(40deg);
             transform: rotate(40deg);
   }
-  /* line 51, src/sass/components/_menu.scss */
+  /* line 53, src/sass/components/_menu.scss */
   .menu-btn:hover .btn-line:nth-child(3) {
     -webkit-transform: translateY(5px) rotate(40deg);
             transform: translateY(5px) rotate(40deg);
-  }
-  /* line 58, src/sass/components/_menu.scss */
-  .menu-btn.close:hover .btn-line {
-    background: #ce9416;
   }
   /* line 61, src/sass/components/_menu.scss */
   .menu-btn.close:hover .btn-line:nth-child(1) {
