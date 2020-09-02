@@ -66,6 +66,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 	const message = document.getElementById('message');
 
 	form.addEventListener('submit', (e) => {
+		e.preventDefault();
 		checkInputs();
 	});
 
@@ -103,19 +104,19 @@ document.addEventListener('DOMContentLoaded', (event) => {
 		form.className = 'form__group error';
 	}
 
-	// success message page - go back button
-	function goBack() {
-		window.history.back();
-	}
-
 	function setSuccessFor(input) {
 		const form = input.parentElement;
 		form.className = 'form__group success';
 	}
 
 	function emailIsValid(email) {
-		return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(
+		/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(
 			email
 		);
+	}
+
+	// success message page - go back button
+	function goBack() {
+		window.history.back();
 	}
 });
