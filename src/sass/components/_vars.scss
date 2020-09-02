@@ -1,18 +1,20 @@
-$main_font: "Roboto", sans-serif;
-$secondary_font: "Gilroy", cursive;
+$main_font: 'Roboto', sans-serif;
+$secondary_font: 'Gilroy', cursive;
 
-@import url("https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&subset=cyrillic");
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&subset=cyrillic');
 
-@import url("https://fonts.googleapis.com/css?family=Baloo+Bhai");
+@import url('https://fonts.googleapis.com/css?family=Baloo+Bhai');
 
 @font-face {
-  font-family: "Gilroy";
-  src: url("../fonts/Gilroy-Light.otf");
-  src: url("../fonts/Gilroy-ExtraBold.otf");
+	font-family: 'Gilroy';
+	src: url('../fonts/Gilroy-Light.otf');
+	src: url('../fonts/Gilroy-ExtraBold.otf');
 }
 
 $primaryColor: #642929;
 $secondaryColor: #ce9416;
+$success_clr: #2ecc71;
+$error_clr: #e74c3c;
 $show-image: true;
 $home-image: url(../images/home-bg-min.jpg);
 $contact-image: url(../images/contactme-min.jpg);

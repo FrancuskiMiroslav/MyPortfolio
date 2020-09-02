@@ -1,164 +1,229 @@
 #contact-img {
-  @include background($contact-image);
+	@include background($contact-image);
 }
 
 #contact {
-  .boxes {
-    width: 50%;
-    margin: 0 auto;
-    align-items: center;
-    margin-top: 16px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    background: linear-gradient(
-      180deg,
-      rgba(darken($color: $primaryColor, $amount: 7), 0.9) 0%,
-      rgba(lighten($color: $primaryColor, $amount: 7), 0.9) 100%
-    );
-    @include media-max-width(800) {
-      width: 80%;
-    }
+	.boxes {
+		width: 50%;
+		margin: 0 auto;
+		align-items: center;
+		margin-top: 16px;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		background: linear-gradient(
+			180deg,
+			rgba(darken($color: $primaryColor, $amount: 7), 0.9) 0%,
+			rgba(lighten($color: $primaryColor, $amount: 7), 0.9) 100%
+		);
+		@include media-max-width(800) {
+			width: 80%;
+		}
 
-    @include media-max-width(600) {
-      width: 100%;
-    }
+		@include media-max-width(600) {
+			width: 100%;
+		}
 
-    .box {
-      width: 50%;
-      border: 3px solid $secondaryColor;
-      padding: 2px 24px;
-      min-height: 18vh;
-      text-align: center;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      @include easeOut;
-      @include media-max-width(1000) {
-        width: 100%;
-      }
+		.box {
+			width: 50%;
+			border: 3px solid $secondaryColor;
+			padding: 2px 24px;
+			min-height: 18vh;
+			text-align: center;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			@include easeOut;
+			@include media-max-width(1000) {
+				width: 100%;
+			}
 
-      i {
-        display: block;
-        margin-bottom: 20px;
-      }
-      &:hover {
-        background: $secondaryColor;
-        color: $primaryColor;
-        cursor: crosshair;
-        span {
-          color: setTextColor($primaryColor);
-        }
-      }
-    }
-  }
+			i {
+				display: block;
+				margin-bottom: 20px;
+			}
+			&:hover {
+				background: $secondaryColor;
+				color: $primaryColor;
+				cursor: crosshair;
+				span {
+					color: setTextColor($primaryColor);
+				}
+			}
+		}
+	}
 
-  .form {
-    background: linear-gradient(
-      0deg,
-      rgba(darken($color: $primaryColor, $amount: 7), 0.9) 0%,
-      rgba(lighten($color: $primaryColor, $amount: 7), 0.9) 100%
-    );
-    height: 100%;
-    width: 100%;
-    padding: 18px;
-    margin: 0 auto;
+	.form {
+		background: linear-gradient(
+			0deg,
+			rgba(darken($color: $primaryColor, $amount: 7), 0.9) 0%,
+			rgba(lighten($color: $primaryColor, $amount: 7), 0.9) 100%
+		);
+		height: 100%;
+		width: 100%;
+		padding: 18px;
+		margin: 0 auto;
 
-    @include media-max-width(1100) {
-      margin-top: 20px;
-      width: 100%;
-    }
+		@include media-max-width(1100) {
+			margin-top: 20px;
+			width: 100%;
+		}
 
-    .hidden {
-      visibility: hidden;
-      height: 0;
-    }
+		.hidden {
+			visibility: hidden;
+			height: 0;
+		}
 
-    select,
-    textarea,
-    input {
-      padding: 8px;
-      border: 1px solid $secondaryColor;
-      color: #ffffff;
-      background-color: transparent;
-    }
+		select,
+		textarea,
+		input {
+			padding: 8px;
+			border: 1px solid $secondaryColor;
+			color: #ffffff;
+			background-color: transparent;
+			outline: none;
+		}
 
-    &__row {
-      display: flex;
-      justify-content: space-between;
-      margin-bottom: 18px;
-      @include media-max-width(500) {
-        display: block;
-      }
+		&__group {
+			position: relative;
+			width: 100%;
+			margin-bottom: 18px;
 
-      select {
-        width: 21%;
-        color: rgba(lighten($color: $primaryColor, $amount: 7), 1);
-        background-color: $secondaryColor;
-        &:hover {
-          background-color: rgba(lighten($color: $primaryColor, $amount: 7), 1);
-          color: $secondaryColor;
-          transition: 0.8s;
-          cursor: pointer;
-        }
-        @include media-max-width(500) {
-          width: auto;
-        }
-      }
+			i {
+				position: absolute;
+				top: 50%;
+				transform: translateY(-50%);
+				right: 10px;
+				color: $secondaryColor;
+				visibility: hidden;
+			}
 
-      input[type="text"] {
-        width: 75%;
-        @include media-max-width(500) {
-          width: 100%;
-        }
-      }
-    }
+			small {
+				position: absolute;
+				left: 10px;
+				bottom: -18px;
+				visibility: hidden;
+				font-size: 12px;
+				font-style: italic;
+			}
+		}
 
-    input[type="email"],
-    textarea {
-      display: block;
-      width: 100%;
-      font-family: $main_font;
-    }
+		&__group.success {
+			input,
+			textarea {
+				border: 2px solid $success_clr;
+				&::placeholder {
+					color: $success_clr;
+				}
+			}
 
-    &__input {
-      &::placeholder {
-        color: #ffffff;
-      }
+			i.fa-check-circle {
+				visibility: visible;
+				color: $success_clr;
+			}
+		}
 
-      &:focus {
-        background: rgba(lighten($color: $secondaryColor, $amount: 7), 0.8);
-      }
-    }
+		&__group.error {
+			input,
+			textarea {
+				border: 2px solid $error_clr;
+				&::placeholder {
+					color: $error_clr;
+				}
+			}
 
-    .netlify-recaptcha {
-      @include media-max-width(500) {
-        transform: scale(0.7);
-        transform-origin: 0 0;
-      }
-      @include media-max-width(400) {
-        transform: scale(0.5);
-        transform-origin: 0 0;
-      }
-    }
+			i.fa-exclamation-circle {
+				visibility: visible;
+				color: $error_clr;
+			}
 
-    .btn {
-      @include btn;
-      border-radius: 0 0px 15px 15px;
-      width: 100%;
-      margin: 0 auto;
-      font-weight: bold;
-      padding: 0.5em 1em;
-      background: $secondaryColor;
-      color: $primaryColor;
-      border-width: 0;
+			small {
+				visibility: visible;
+				color: $error_clr;
+			}
+		}
 
-      &:hover {
-        border: 1px solid $secondaryColor;
-        background: $primaryColor;
-        color: $secondaryColor;
-      }
-    }
-  }
+		&__row {
+			display: flex;
+			justify-content: space-between;
+
+			width: 100%;
+			flex-wrap: wrap;
+
+			@include media-max-width(500) {
+				display: block;
+			}
+
+			select {
+				width: 70px;
+				color: rgba(lighten($color: $primaryColor, $amount: 7), 1);
+				background-color: $secondaryColor;
+				margin-bottom: 18px;
+				border-radius: 15px 0 0 0;
+
+				&:hover {
+					background-color: rgba(lighten($color: $primaryColor, $amount: 7), 1);
+					color: $secondaryColor;
+					transition: 0.8s;
+					cursor: pointer;
+				}
+
+				@include media-max-width(500) {
+					width: auto;
+				}
+			}
+
+			input[type='text'] {
+				width: 100%;
+			}
+		}
+
+		input[type='email'],
+		textarea {
+			display: block;
+			width: 100%;
+			font-family: $main_font;
+		}
+
+		&__input {
+			&::placeholder {
+				color: #ffffff;
+			}
+
+			&:focus {
+				background: rgba(lighten($color: $secondaryColor, $amount: 7), 0.8);
+			}
+		}
+
+		.netlify-recaptcha {
+			@include media-max-width(500) {
+				transform: scale(0.7);
+				transform-origin: 0 0;
+			}
+			@include media-max-width(400) {
+				transform: scale(0.5);
+				transform-origin: 0 0;
+			}
+		}
+
+		.btn {
+			@include btn;
+			border-radius: 0 0px 15px 15px;
+			width: 100%;
+			margin: 0 auto;
+			font-weight: bold;
+			padding: 0.5em 1em;
+			background: $secondaryColor;
+			color: $primaryColor;
+			border-width: 0;
+			outline: none;
+
+			&:hover {
+				border: 1px solid $secondaryColor;
+				background: $primaryColor;
+				color: $secondaryColor;
+			}
+		}
+	}
 }
