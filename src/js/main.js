@@ -64,19 +64,13 @@ document.addEventListener('DOMContentLoaded', (event) => {
 	const name = document.getElementById('name');
 	const email = document.getElementById('email');
 	const message = document.getElementById('message');
+	const formBtn = document.getElementById('form-btn');
 
-	form.addEventListener('submit', (e) => {
-		e.preventDefault();
-		checkInputs();
-
-		if (checkInputs() === true) {
-			const request = new XMLHttpRequest();
-
-			request.open('post', '/pages/success');
-			request.onload = function () {
-				console.log(request.responseText);
-			};
-			request.send(new FormData(form));
+	document.addEventListener('mouseover', () => {
+		if (checkInputs() === false) {
+			formBtn.disabled = true;
+		} else {
+			formBtn.disabled = false;
 		}
 	});
 
