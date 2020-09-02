@@ -68,6 +68,16 @@ document.addEventListener('DOMContentLoaded', (event) => {
 	form.addEventListener('submit', (e) => {
 		e.preventDefault();
 		checkInputs();
+
+		if (checkInputs() === true) {
+			const request = new XMLHttpRequest();
+
+			request.open('post', '/pages/success');
+			request.onload = function () {
+				console.log(request.responseText);
+			};
+			request.send(new FormData(form));
+		}
 	});
 
 	function checkInputs() {
@@ -93,6 +103,17 @@ document.addEventListener('DOMContentLoaded', (event) => {
 			setErrorFor(message, 'Please enter your message');
 		} else {
 			setSuccessFor(message);
+		}
+
+		if (
+			nameValue === '' ||
+			emailValue === '' ||
+			messageValue === '' ||
+			!emailIsValid(emailValue)
+		) {
+			return false;
+		} else {
+			return true;
 		}
 	}
 
