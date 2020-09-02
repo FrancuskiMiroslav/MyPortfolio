@@ -66,13 +66,25 @@ document.addEventListener('DOMContentLoaded', (event) => {
 	const message = document.getElementById('message');
 	const formBtn = document.getElementById('form-btn');
 
-	document.addEventListener('mouseover', () => {
-		if (checkInputs() === false) {
-			formBtn.disabled = true;
-		} else {
-			formBtn.disabled = false;
-		}
-	});
+	[
+		'click',
+		'ontouchstart',
+		'mouseover',
+		'keydown',
+		'keypress',
+		'touchstart',
+		'touchmove',
+	].forEach(
+		(event) =>
+			document.addEventListener(event, () => {
+				if (checkInputs() === false) {
+					formBtn.disabled = true;
+				} else {
+					formBtn.disabled = false;
+				}
+			}),
+		false
+	);
 
 	function checkInputs() {
 		const nameValue = name.value.trim();
