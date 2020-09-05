@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&subset=cyrillic");
 @import url("https://fonts.googleapis.com/css?family=Baloo+Bhai");
 @font-face {
-  font-family: "Gilroy";
+  font-family: 'Gilroy';
   src: url("../fonts/Gilroy-Light.otf");
   src: url("../fonts/Gilroy-ExtraBold.otf");
 }
@@ -1299,9 +1299,112 @@
   border: 1px solid #ce9416;
   color: #ffffff;
   background-color: transparent;
+  outline: none;
 }
 
-/* line 87, src/sass/pages/_contact.scss */
+/* line 88, src/sass/pages/_contact.scss */
+#contact .form__group {
+  position: relative;
+  width: 100%;
+  margin-bottom: 18px;
+}
+
+/* line 93, src/sass/pages/_contact.scss */
+#contact .form__group i {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  right: 10px;
+  color: #ce9416;
+  visibility: hidden;
+}
+
+/* line 102, src/sass/pages/_contact.scss */
+#contact .form__group small {
+  position: absolute;
+  left: 10px;
+  bottom: -18px;
+  visibility: hidden;
+  font-size: 12px;
+  font-style: italic;
+}
+
+/* line 113, src/sass/pages/_contact.scss */
+#contact .form__group.success input,
+#contact .form__group.success textarea {
+  border: 2px solid #2ecc71;
+}
+
+/* line 116, src/sass/pages/_contact.scss */
+#contact .form__group.success input::-webkit-input-placeholder,
+#contact .form__group.success textarea::-webkit-input-placeholder {
+  color: #2ecc71;
+}
+#contact .form__group.success input::-moz-placeholder,
+#contact .form__group.success textarea::-moz-placeholder {
+  color: #2ecc71;
+}
+#contact .form__group.success input:-ms-input-placeholder,
+#contact .form__group.success textarea:-ms-input-placeholder {
+  color: #2ecc71;
+}
+#contact .form__group.success input::-ms-input-placeholder,
+#contact .form__group.success textarea::-ms-input-placeholder {
+  color: #2ecc71;
+}
+#contact .form__group.success input::placeholder,
+#contact .form__group.success textarea::placeholder {
+  color: #2ecc71;
+}
+
+/* line 121, src/sass/pages/_contact.scss */
+#contact .form__group.success i.fa-check-circle {
+  visibility: visible;
+  color: #2ecc71;
+}
+
+/* line 128, src/sass/pages/_contact.scss */
+#contact .form__group.error input,
+#contact .form__group.error textarea {
+  border: 2px solid #e74c3c;
+}
+
+/* line 131, src/sass/pages/_contact.scss */
+#contact .form__group.error input::-webkit-input-placeholder,
+#contact .form__group.error textarea::-webkit-input-placeholder {
+  color: #e74c3c;
+}
+#contact .form__group.error input::-moz-placeholder,
+#contact .form__group.error textarea::-moz-placeholder {
+  color: #e74c3c;
+}
+#contact .form__group.error input:-ms-input-placeholder,
+#contact .form__group.error textarea:-ms-input-placeholder {
+  color: #e74c3c;
+}
+#contact .form__group.error input::-ms-input-placeholder,
+#contact .form__group.error textarea::-ms-input-placeholder {
+  color: #e74c3c;
+}
+#contact .form__group.error input::placeholder,
+#contact .form__group.error textarea::placeholder {
+  color: #e74c3c;
+}
+
+/* line 136, src/sass/pages/_contact.scss */
+#contact .form__group.error i.fa-exclamation-circle {
+  visibility: visible;
+  color: #e74c3c;
+}
+
+/* line 141, src/sass/pages/_contact.scss */
+#contact .form__group.error small {
+  visibility: visible;
+  color: #e74c3c;
+}
+
+/* line 147, src/sass/pages/_contact.scss */
 #contact .form__row {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1309,24 +1412,28 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin-bottom: 18px;
+  width: 100%;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 @media (max-width: 500px) {
-  /* line 87, src/sass/pages/_contact.scss */
+  /* line 147, src/sass/pages/_contact.scss */
   #contact .form__row {
     display: block;
   }
 }
 
-/* line 95, src/sass/pages/_contact.scss */
+/* line 158, src/sass/pages/_contact.scss */
 #contact .form__row select {
-  width: 21%;
+  width: 70px;
   color: #7d3333;
   background-color: #ce9416;
+  margin-bottom: 18px;
+  border-radius: 15px 0 0 0;
 }
 
-/* line 99, src/sass/pages/_contact.scss */
+/* line 165, src/sass/pages/_contact.scss */
 #contact .form__row select:hover {
   background-color: #7d3333;
   color: #ce9416;
@@ -1336,33 +1443,26 @@
 }
 
 @media (max-width: 500px) {
-  /* line 95, src/sass/pages/_contact.scss */
+  /* line 158, src/sass/pages/_contact.scss */
   #contact .form__row select {
     width: auto;
   }
 }
 
-/* line 110, src/sass/pages/_contact.scss */
-#contact .form__row input[type="text"] {
-  width: 75%;
+/* line 177, src/sass/pages/_contact.scss */
+#contact .form__row input[type='text'] {
+  width: 100%;
 }
 
-@media (max-width: 500px) {
-  /* line 110, src/sass/pages/_contact.scss */
-  #contact .form__row input[type="text"] {
-    width: 100%;
-  }
-}
-
-/* line 118, src/sass/pages/_contact.scss */
-#contact .form input[type="email"],
+/* line 182, src/sass/pages/_contact.scss */
+#contact .form input[type='email'],
 #contact .form textarea {
   display: block;
   width: 100%;
   font-family: "Roboto", sans-serif;
 }
 
-/* line 126, src/sass/pages/_contact.scss */
+/* line 190, src/sass/pages/_contact.scss */
 #contact .form__input::-webkit-input-placeholder {
   color: #ffffff;
 }
@@ -1379,13 +1479,13 @@
   color: #ffffff;
 }
 
-/* line 130, src/sass/pages/_contact.scss */
+/* line 194, src/sass/pages/_contact.scss */
 #contact .form__input:focus {
   background: rgba(231, 169, 32, 0.8);
 }
 
 @media (max-width: 500px) {
-  /* line 135, src/sass/pages/_contact.scss */
+  /* line 199, src/sass/pages/_contact.scss */
   #contact .form .netlify-recaptcha {
     -webkit-transform: scale(0.7);
             transform: scale(0.7);
@@ -1395,7 +1495,7 @@
 }
 
 @media (max-width: 400px) {
-  /* line 135, src/sass/pages/_contact.scss */
+  /* line 199, src/sass/pages/_contact.scss */
   #contact .form .netlify-recaptcha {
     -webkit-transform: scale(0.5);
             transform: scale(0.5);
@@ -1404,7 +1504,7 @@
   }
 }
 
-/* line 146, src/sass/pages/_contact.scss */
+/* line 210, src/sass/pages/_contact.scss */
 #contact .form .btn, #contact .form #work .btn-light, #work #contact .form .btn-light, #contact .form #work .btn-dark, #work #contact .form .btn-dark {
   display: block;
   padding: 8px 16px;
@@ -1420,6 +1520,7 @@
   background: #ce9416;
   color: #642929;
   border-width: 0;
+  outline: none;
 }
 
 /* line 247, src/sass/components/_mixins.scss */
@@ -1430,7 +1531,7 @@
   transition: all 0.8s ease-out;
 }
 
-/* line 157, src/sass/pages/_contact.scss */
+/* line 222, src/sass/pages/_contact.scss */
 #contact .form .btn:hover, #contact .form #work .btn-light:hover, #work #contact .form .btn-light:hover, #contact .form #work .btn-dark:hover, #work #contact .form .btn-dark:hover {
   border: 1px solid #ce9416;
   background: #642929;
