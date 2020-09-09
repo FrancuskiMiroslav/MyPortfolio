@@ -1,0 +1,87 @@
+html,
+body {
+	height: 100%;
+	scroll-behavior: smooth;
+	box-sizing: border-box;
+	@include fluid-typo($min_width, $max_width, $min_font, $max_font);
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+	padding: 0;
+	margin: 0;
+}
+
+ul,
+ol {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+*::-webkit-scrollbar {
+	max-width: 20px;
+}
+
+*::-webkit-scrollbar-track,
+*::-webkit-scrollbar-corner,
+*::-webkit-resizer {
+	box-shadow: inset 0 0 15px rgba($primaryColor, 1);
+	background-color: rgba($primaryColor, 1);
+}
+
+*::-webkit-scrollbar-thumb {
+	background-color: $secondaryColor;
+	outline: 1px solid rgba($secondaryColor, 1);
+}
+
+*::-webkit-scrollbar-thumb:hover {
+	background: rgba($secondaryColor, 0.4);
+}
+
+*::-webkit-scrollbar-button:single-button {
+	background-color: rgba($primaryColor, 1);
+	display: block;
+	border-style: solid;
+}
+/* Up */
+*::-webkit-scrollbar-button:single-button:vertical:decrement {
+	border-width: 0 7px 20px 7px;
+	border-color: transparent transparent rgba($secondaryColor, 1) transparent;
+}
+
+*::-webkit-scrollbar-button:single-button:vertical:decrement:hover {
+	border-color: transparent transparent rgba($secondaryColor, 0.4) transparent;
+}
+/* Down */
+*::-webkit-scrollbar-button:single-button:vertical:increment {
+	border-width: 20px 7px 0 7px;
+	border-color: rgba($secondaryColor, 1) transparent transparent transparent;
+}
+
+*::-webkit-scrollbar-button:vertical:single-button:increment:hover {
+	border-color: rgba($secondaryColor, 0.4) transparent transparent transparent;
+}
+
+/* Left */
+*::-webkit-scrollbar-button:single-button:horizontal:decrement {
+	border-width: 7px 20px 7px 0px;
+	border-color: transparent rgba($secondaryColor, 1) transparent transparent;
+}
+
+*::-webkit-scrollbar-button:single-button:horizontal:decrement:hover {
+	border-color: transparent rgba($secondaryColor, 0.4) transparent transparent;
+}
+/* right */
+*::-webkit-scrollbar-button:single-button:horizontal:increment {
+	border-width: 7px 0px 7px 20px;
+	border-color: transparent transparent transparent rgba($secondaryColor, 1);
+}
+
+*::-webkit-scrollbar-button:single-button:horizontal:hover {
+	border-color: transparent transparent transparent rgba($secondaryColor, 0.4);
+}
