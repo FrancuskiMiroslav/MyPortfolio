@@ -128,8 +128,11 @@
 
 @mixin background($image) {
 	@if $showImage {
+		background-attachment: fixed !important;
+		background-repeat: no-repeat !important;
+		background-size: cover !important;
+		background-position: center !important;
 		background: #{$image};
-		background-size: cover;
 
 		&:before {
 			content: '';

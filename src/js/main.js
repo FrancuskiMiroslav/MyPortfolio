@@ -27,20 +27,21 @@ menuBtn.addEventListener('click', (e) => {
 
 // page counter
 const countEl = document.getElementById('count');
-console.log(countEl);
 
-function updateVisitCount() {
-	fetch(
-		'https://api.countapi.xyz/update/francuskimiroslav.com/homepage/?amount=1 '
-	)
-		.then((res) => res.json())
-		.then((res) => {
-			countEl.innerHTML = `<span class="text-secondary"><i class="fas fa-hashtag"></i> ${res.value} </span>`;
-		});
-}
+if (countEl) {
+	function updateVisitCount() {
+		fetch(
+			'https://api.countapi.xyz/update/francuskimiroslav.com/homepage/?amount=1 '
+		)
+			.then((res) => res.json())
+			.then((res) => {
+				countEl.innerHTML = `<span class="text-secondary"><i class="fas fa-hashtag"></i> ${res.value} </span>`;
+			});
+	}
 
-if (countEl != null) {
-	updateVisitCount();
+	if (countEl != null) {
+		updateVisitCount();
+	}
 }
 
 // success message page - go back button
