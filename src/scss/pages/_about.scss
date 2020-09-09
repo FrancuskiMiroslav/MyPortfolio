@@ -208,6 +208,23 @@
 			}
 		}
 
+		.animation-bar-50 {
+			@include animation-bar;
+			& span {
+				animation: progress-anim-50 4s linear;
+				width: 50%;
+			}
+
+			@keyframes progress-anim-50 {
+				0% {
+					width: 10%;
+				}
+				100% {
+					width: 50%;
+				}
+			}
+		}
+
 		.animation-bar-40 {
 			@include animation-bar;
 			& span {

@@ -1,14 +1,28 @@
 // navigation
-$(document).ready(function () {
-	$('.menu-btn').click(function () {
-		if (!$(this).hasClass('close')) {
-			$('.menu-btn').addClass('close');
-			$('.menu, .menu-nav, .menu-branding, .nav-item').addClass('show');
-		} else {
-			$('.menu-btn').removeClass('close');
-			$('.menu, .menu-nav, .menu-branding, .nav-item').removeClass('show');
-		}
-	});
+const menuBtn = document.querySelector('.menu-btn');
+const menu = document.querySelector('.menu');
+const menuBranding = document.querySelector('.menu-branding');
+const menuNav = document.querySelector('.menu-nav');
+const navItem = Array.from(document.querySelectorAll('.nav-item'));
+
+menuBtn.addEventListener('click', (e) => {
+	if (e.currentTarget.className != 'menu-btn close') {
+		menuBtn.classList.add('close');
+		menu.classList.add('show');
+		menuBranding.classList.add('show');
+		menuNav.classList.add('show');
+		navItem.forEach((item) => {
+			item.classList.add('show');
+		});
+	} else {
+		menuBtn.classList.remove('close');
+		menu.classList.remove('show');
+		menuBranding.classList.remove('show');
+		menuNav.classList.remove('show');
+		navItem.forEach((item) => {
+			item.classList.remove('show');
+		});
+	}
 });
 
 // page counter
@@ -28,124 +42,6 @@ function updateVisitCount() {
 if (countEl != null) {
 	updateVisitCount();
 }
-
-// isotope initiate
-var $grid = $('.projects').isotope({
-	itemSelector: '.item',
-	layoutMode: 'fitRows',
-});
-
-var filters = {};
-
-$('.portfolio-menu').on('change', function (event) {
-	var $select = $(event.target);
-	// get group key
-	var filterGroup = $select.attr('value-group');
-	// set filter for group
-	filters[filterGroup] = event.target.value;
-	// combine filters
-	var filterValue = concatValues(filters);
-	// set filter for Isotope
-	$grid.isotope({ filter: filterValue });
-});
-
-// flatten object by concatting values
-function concatValues(obj) {
-	var value = '';
-	for (var prop in obj) {
-		value += obj[prop];
-	}
-	return value;
-}
-
-document.addEventListener('DOMContentLoaded', (event) => {
-	// form validation
-	const form = document.getElementById('contact-form');
-	const name = document.getElementById('name');
-	const email = document.getElementById('email');
-	const message = document.getElementById('message');
-	const formBtn = document.getElementById('form-btn');
-
-	if (form) {
-		[
-			'click',
-			'ontouchstart',
-			'mouseover',
-			'keydown',
-			'keypress',
-			'touchstart',
-			'touchmove',
-		].forEach(
-			(event) =>
-				document.addEventListener(event, () => {
-					if (checkInputs() === false) {
-						formBtn.disabled = true;
-					} else {
-						formBtn.disabled = false;
-					}
-				}),
-			false
-		);
-
-		function checkInputs() {
-			const nameValue = name.value.trim();
-			const emailValue = email.value.trim();
-			const messageValue = message.value.trim();
-
-			if (nameValue === '') {
-				setErrorFor(name, 'Please enter your full name');
-			} else {
-				setSuccessFor(name);
-			}
-
-			if (emailValue === '') {
-				setErrorFor(email, 'Please enter your email address');
-			} else if (!emailIsValid(emailValue)) {
-				setErrorFor(email, 'Email is not valid');
-			} else {
-				setSuccessFor(email);
-			}
-
-			if (messageValue === '') {
-				setErrorFor(message, 'Please enter your message');
-			} else {
-				setSuccessFor(message);
-			}
-
-			if (
-				nameValue === '' ||
-				emailValue === '' ||
-				messageValue === '' ||
-				!emailIsValid(emailValue)
-			) {
-				return false;
-			} else {
-				return true;
-			}
-		}
-
-		function setErrorFor(input, message) {
-			const form = input.parentElement;
-			const small = form.querySelector('small');
-
-			small.innerText = message;
-			form.className = 'form__group error';
-		}
-
-		function setSuccessFor(input) {
-			const form = input.parentElement;
-			form.className = 'form__group success';
-		}
-
-		function emailIsValid(email) {
-			const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(
-				email
-			);
-
-			return re;
-		}
-	}
-});
 
 // success message page - go back button
 function goBack() {
