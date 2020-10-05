@@ -55,10 +55,10 @@ body {
 			a {
 				padding: 8px;
 				margin: 0 10px;
+				@include easeOut();
 
 				&:hover {
 					color: $secondaryColor;
-					@include easeOut();
 				}
 			}
 		}
