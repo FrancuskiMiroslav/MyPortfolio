@@ -1,3 +1,23 @@
+document.addEventListener('DOMContentLoaded', function () {
+	window.addEventListener('load', (e) => {
+		const preload = document.querySelector('.preload');
+
+		preload.classList.add('preload-finished');
+	});
+
+	const btnScrollToTop = document.getElementById('btnScrollToTop');
+
+	if (btnScrollToTop) {
+		btnScrollToTop.addEventListener('click', (e) => {
+			window.scrollTo({
+				top: 0,
+				left: 0,
+				behavior: 'smooth',
+			});
+		});
+	}
+});
+
 // navigation
 const menuBtn = document.querySelector('.menu-btn');
 const menu = document.querySelector('.menu');
@@ -42,9 +62,4 @@ if (countEl) {
 	if (countEl != null) {
 		updateVisitCount();
 	}
-}
-
-// success message page - go back button
-function goBack() {
-	window.history.back();
 }

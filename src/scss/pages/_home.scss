@@ -12,6 +12,17 @@ body {
 	display: flex;
 	flex-direction: column;
 
+	#preloadSvg {
+		@keyframes wheel {
+			from {
+				transform: rotateY(0deg);
+			}
+			to {
+				transform: rotateZ(360deg);
+			}
+		}
+	}
+
 	h1,
 	h2,
 	h3 {
