@@ -6,7 +6,6 @@
 body {
 	background: $primaryColor;
 	color: setTextColor($primaryColor);
-	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 	min-height: 100%;
 	line-height: 1.5;
 	display: flex;
@@ -39,9 +38,15 @@ body {
 			@include boxShadow;
 		}
 	}
+
 	a {
 		color: setTextColor($primaryColor);
 	}
+
+	i {
+		color: $secondaryColor;
+	}
+
 	header {
 		position: fixed;
 		z-index: 2;
@@ -63,6 +68,13 @@ body {
 
 		.icons {
 			margin-bottom: 15px;
+			display: flex;
+			align-items: center;
+
+			@include media-max-width(500) {
+				justify-content: center;
+			}
+
 			a {
 				padding: 8px;
 				margin: 0 10px;
@@ -71,6 +83,11 @@ body {
 				&:hover {
 					color: $secondaryColor;
 				}
+			}
+
+			.svg {
+				width: 100%;
+				max-width: 35px;
 			}
 		}
 
