@@ -4,6 +4,7 @@
 	"description": "",
 	"main": "main.js",
 	"scripts": {
+		"predeploy": "npm run build",
 		"gulp": "gulp --development",
 		"build": "gulp build --production",
 		"deploy": "gh-pages -d dist"

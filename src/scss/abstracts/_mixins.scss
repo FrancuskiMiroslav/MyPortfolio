@@ -195,6 +195,29 @@
 	padding: 0 #{$padding}px;
 }
 
+@mixin underline {
+	position: relative;
+
+	&::before {
+		position: absolute;
+		bottom: -6px;
+		left: 50%;
+		transform: translateX(-50%);
+		content: '';
+		border-bottom: 2px solid $primaryColor;
+		width: 0%;
+		height: 2px;
+		opacity: 0;
+		transition: 0.3s all ease-in-out;
+	}
+
+	&:hover:before,
+	&:focus:before {
+		width: 60%;
+		opacity: 1;
+	}
+}
+
 @mixin animation-bar {
 	text-align: left;
 	position: relative;
