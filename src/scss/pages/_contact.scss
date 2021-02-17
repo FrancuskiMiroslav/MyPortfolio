@@ -118,9 +118,11 @@
 				}
 			}
 
-			i.fa-check-circle {
+			i.check-circle {
 				visibility: visible;
 				color: $success_clr;
+				width: 20px;
+				height: 20px;
 			}
 		}
 
@@ -133,9 +135,11 @@
 				}
 			}
 
-			i.fa-exclamation-circle {
+			i.exclamation-triangle {
 				visibility: visible;
 				color: $error_clr;
+				width: 20px;
+				height: 20px;
 			}
 
 			small {
