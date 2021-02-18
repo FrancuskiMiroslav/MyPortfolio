@@ -73,6 +73,36 @@
 			}
 		}
 
+		&__btn {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+			&:hover {
+				svg {
+					path {
+						fill: rgba($color: $primaryColor, $alpha: 1);
+					}
+				}
+			}
+		}
+
+		&__icon {
+			display: flex;
+			align-items: center;
+			margin-right: 8px;
+		}
+
+		&__svg {
+			width: 20px;
+			height: 20px;
+
+			path {
+				transition: 0.5s linear all;
+				fill: rgba($color: $secondaryColor, $alpha: 1);
+			}
+		}
+
 		&__hover {
 			overflow: hidden;
 			margin-bottom: 6px;
