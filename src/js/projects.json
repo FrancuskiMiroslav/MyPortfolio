@@ -207,10 +207,10 @@
 		{
 			"id": 18,
 			"title": "Tennis Academy Elite - Tennis Academy Elite",
-			"description": "2019. custom wordpress theme using 2020 child theme with template for all pages, Gutenberg Page Builder, CPT",
+			"description": "2020. custom wordpress theme using 2020 child theme with template for all pages, Gutenberg Page Builder, CPT",
 			"frontEndTools": ["wordpress", "scss"],
 			"frontEndFramework": [],
-			"year": "2019",
+			"year": "2020",
 			"imageMob": "./assets/images/projects/tennisacademyelite-rs-2021-02-19-00_22_03-min.jpg",
 			"imageDesk": "./assets/images/projects/tennisacademyelite-rs-2021-02-19-00_22_03.jpg",
 			"projectCodeUrl": "",
@@ -315,7 +315,7 @@
 		{
 			"id": 27,
 			"title": "CT_SkillTest",
-			"description": "2020. # single page test with tabs that turn into accordion on mobile and responsive slick slider",
+			"description": "2020. # single page design with tabs that turn into accordion on mobile and responsive slick slider",
 			"frontEndTools": ["javascript", "scss"],
 			"frontEndFramework": [],
 			"year": "2020",
