@@ -67,7 +67,7 @@ document.addEventListener('DOMContentLoaded', function () {
                                             ></path>
                                         </svg>
                                     </i>
-                                    <h5 class="projects__btn-text">Project</h5>
+                                    <h4 class="projects__btn-text">Project</h4>
                                 </a>
                                 <div class="projects__flex">
                                 ${
@@ -95,7 +95,7 @@ document.addEventListener('DOMContentLoaded', function () {
                                                 ></path>
                                             </svg>
                                         </i>
-                                        <h5 class="projects__btn-text">GitHub</h5>
+                                        <h4 class="projects__btn-text">GitHub</h4>
                                     </a> 
                                     `
 																		: ''
@@ -122,7 +122,7 @@ document.addEventListener('DOMContentLoaded', function () {
                                                 ></path>
                                             </svg>
                                         </i>
-                                        <h5 class="projects__btn-text">Website</h5>
+                                        <h4 class="projects__btn-text">Website</h4>
                                     </a>
                                 </div>
                             </div>
