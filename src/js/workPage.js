@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function () {
 		$('.portfolio-menu').on('change', function (event) {
 			var $select = $(event.target);
 			// get group key
-			var filterGroup = $select.attr('value-group');
+			var filterGroup = $select.attr('name');
 			// set filter for group
 			filters[filterGroup] = event.target.value;
 			// combine filters
