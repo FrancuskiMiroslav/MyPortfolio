@@ -187,7 +187,6 @@
 		textarea {
 			display: block;
 			width: 100%;
-			font-family: $font-open-sans;
 		}
 
 		&__input {
@@ -216,7 +215,7 @@
 			border-radius: 0 0px 15px 15px;
 			width: 100%;
 			margin: 0 auto;
-			font-weight: bold;
+			font-weight: $fw-bold;
 			padding: 0.5em 1em;
 			background: $secondaryColor;
 			color: $primaryColor;

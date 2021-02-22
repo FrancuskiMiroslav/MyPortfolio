@@ -11,7 +11,7 @@
 		align-items: center;
 		background: $secondaryColor;
 		color: $primaryColor;
-		font-weight: bold;
+		font-weight: $fw-bold;
 		&:hover,
 		&:focus {
 			background: $primaryColor;
