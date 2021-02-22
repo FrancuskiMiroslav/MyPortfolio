@@ -219,9 +219,9 @@
 
 @font-face {
 	font-family: 'Lato';
-	src: local('Lato'), url('./assets/fonts/Lato-Italic.woff2') format('woff2'),
-		url('./assets/fonts/Lato-Italic.woff') format('woff'),
-		url('./assets/fonts/Lato-Italic.ttf') format('truetype');
+	src: local('Lato'), url('./assets/fonts/Lato-Italic.ttf') format('truetype'),
+		url('./assets/fonts/Lato-Italic.woff2') format('woff2'),
+		url('./assets/fonts/Lato-Italic.woff') format('woff');
 	font-weight: 400;
 	font-style: italic;
 }
@@ -246,9 +246,9 @@
 
 @font-face {
 	font-family: 'Lato';
-	src: local('Lato'), url('./assets/fonts/Lato-Bold.woff2') format('woff2'),
-		url('./assets/fonts/Lato-Bold.woff') format('woff'),
-		url('./assets/fonts/Lato-Bold.ttf') format('truetype');
+	src: local('Lato'), url('./assets/fonts/Lato-Bold.ttf') format('truetype'),
+		url('./assets/fonts/Lato-Bold.woff2') format('woff2'),
+		url('./assets/fonts/Lato-Bold.woff') format('woff');
 	font-weight: 700;
 }
 
