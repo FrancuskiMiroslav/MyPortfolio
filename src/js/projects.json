@@ -362,6 +362,18 @@
 		},
 		{
 			"id": 31,
+			"title": "Image Gallery with React and TailwindCSS with Pixabay API",
+			"description": "2020. # Image Gallery - React, TailwindCSS and Pixabay API with only 2 Hooks used(useState, useEffect), no routes",
+			"frontEndTools": ["javascript", "api"],
+			"frontEndFramework": ["react", "tailwind"],
+			"year": "2020",
+			"imageMob": "./assets/images/projects/ImageGallery-React-TailwindCSS-2020-04-12-23_14_21.jpg",
+			"imageDesk": "./assets/images/projects/ImageGallery-React-TailwindCSS-2020-04-12-23_14_21-min.jpg",
+			"projectCodeUrl": "https://github.com/FrancuskiMiroslav/ImageGallery-React-TailwindCSS",
+			"projectUrl": "https://francuskimiroslav.github.io/ImageGallery-React-TailwindCSS/"
+		},
+		{
+			"id": 32,
 			"title": "Dynamic New Year Countdown Timer",
 			"description": "2021. # Landing page that counts down from the current date to the next new year",
 			"frontEndTools": ["javascript", "scss"],
@@ -373,7 +385,7 @@
 			"projectUrl": "https://francuskimiroslav.github.io/NewYearCountdown"
 		},
 		{
-			"id": 32,
+			"id": 33,
 			"title": "Frontend Mentor - REST Countries API with color theme switcher",
 			"description": "2021. # Lots of stuff working as a whole with only 1 fetch request and single page, search is combined with regions so if you choose a region and search for a country it will appear only if it's from that region",
 			"frontEndTools": ["javascript", "scss", "api"],
